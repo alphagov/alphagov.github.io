@@ -1,0 +1,130 @@
+/* GOV.UK colour palettes */
+
+@white: 			#fff;
+@black: 			#000;
+@pale-grey: 		#f5f5f5;
+@circle-radius: 	4rem;
+@box-h:				6rem;
+@border-color:		#ccc;
+
+
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.circle {
+	display:block;
+	width:@circle-radius*2; 
+	height:@circle-radius*2;
+	.border-radius(@circle-radius);
+}
+.box {
+	display:block;
+	width:100%;
+}
+
+.bordered {
+	border-color: @border-color; 
+	border-width: 1px; 
+	border-style: solid;
+	color:#333;
+}
+
+
+body { margin-top:3rem; }
+h1,h2,h3,h4 { font-family:"Gill Sans","Helvetica Neue",Helvetica, sans-serif; font-weight:500; }
+ul.palette { }
+ul.palette li p { margin:0; padding:0; font-family:"Gill Sans","Helvetica Neue",Helvetica, sans-serif; font-weight:500; font-size: 1.5rem; line-height:2.2rem; padding-left:1rem; color:#fff; }
+ul.palette li { .box; padding-top:1.6rem; padding-bottom:1.6rem; }
+.department h4 { padding-left:1rem; padding-right:1rem; color:#fff; margin-bottom:2rem; }
+.divider { margin-top: 3rem; }
+
+
+/* Palette, colours */
+.purple { background-color:#2e358b; }
+.purple_paler { background-color: #9799c4; }
+.purple_palest { background-color: #d5d6e7; }
+
+.mauve { background-color:#6f72af; }
+.mauve_paler { background-color: #b7b9d7; }
+.mauve_palest { background-color: #e2e2ef; }
+
+.fuschia { background-color:#912b88; }
+.fuschia_paler { background-color: #c994c3; }
+.fuschia_palest { background-color: #e9d4e6; }
+
+.pink { background-color:#d53880; }
+.pink_paler { background-color: #eb9bbe; }
+.pink_palest { background-color: #f6d7e5; }
+
+.baby_pink { background-color:#f499be; }
+.baby_pink_paler { background-color: #faccdf; }
+.baby_pink_palest { background-color: #fdebf2; }
+
+.red { background-color: #b10e1e; }
+.red_paler { background-color: #d9888c; }
+.red_palest { background-color: #efcfd1; }
+
+.mellow_red { background-color: #df3034; }
+.mellow_red_paler { background-color: #ef9998; }
+.mellow_red_palest { background-color: #f9d6d6; }
+
+.orange { background-color: #f47738; }
+.orange_paler { background-color: #fabb96; }
+.orange_palest { background-color: #fde4d4; }
+
+.brown { background-color: #b58840; }
+.brown_paler { background-color: #dac39c; }
+.brown_palest { background-color: #f0e7d7; }
+
+.yellow { background-color: #ffbf47; }
+.yellow_paler { background-color: #ffdf94; }
+.yellow_palest { background-color: #fff2d3; }
+
+.grass_green { background-color: #85994b; }
+.grass_green_paler { background-color: #c2cca3; }
+.grass_green_palest { background-color: #e7ebda; }
+
+.green { background-color: #006435; }
+.green_paler { background-color: #7fb299; }
+.green_palest { background-color: #cce0d6; }
+
+.turquoise { background-color: #28a197; }
+.turquoise_paler { background-color: #95d0cb; }
+.turquoise_palest { background-color: #d5ecea; }
+
+.light_blue { background-color: #2b8cc4; }
+.light_blue_paler { background-color: #96c6e2; }
+.light_blue_palest { background-color: #d5e8f3; }
+
+
+/* Palette, greys */
+.dark_grey_1 { background-color: #231f20; }
+.dark_grey_2 { background-color: #083640; }
+.mid_grey { background-color: #c1cacb; }
+.light_grey_1 { background-color: #e1e8e8; .bordered; }
+.light_grey_2 { background-color: #e8f0f0; .bordered; }
+.white { background-color: #ffffff; .bordered;}
+.cream_1 { background-color: #f8f7ee; .bordered; }
+.cream_2 { background-color: #f5f0d6; .bordered; }
+
+/* Department colours */
+.treasury { background-color: #c03024; }
+.cabinet_office { background-color: #0078ba; }
+.dept_of_educ { background-color: #f6823e; }
+.dept_of_trans { background-color: #007162; }
+.home_office { background-color: #804292; }
+.dept_of_health { background-color:#00ae9f; }
+.ministry_of_justice { background-color:#231f20; }
+.ministry_of_defence { background-color:#5d2a44; }
+.foreign_and_commonwealth_office { background-color:#00569e; }
+.dept_for_communities_and_local_gov { background-color:#4a338c; }
+.dept_for_energy_and_climate_change { background-color:#78c059; }
+.dept_for_culture_media_and_sport { background-color:#ee1089; }
+.dept_for_environment_food_and_rural_affairs { background-color:#8a8c30; }
+.dept_for_work_and_pensions { background-color:#16bcb8; }
+.dept_for_business_innovation_and_skills { background-color:#3a6f8c; }
+.dept_for_international_development { background-color:#729ecd; }
+
