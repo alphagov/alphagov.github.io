@@ -3,7 +3,7 @@
 function generate_directory_index {
   echo -e "Creating directory listing index.html for "$1
   (
-    echo -e "<html>\n<body>\n<h1>Directory listing</h1>\n<hr/>\n<pre>"
+    echo -e "<html>\n<body>\n<h1 class=\"gds-autogen\">Directory listing</h1>\n<hr/>\n<pre>"
     ls -1pa "${1}" |\
       grep -v "^\./$" |\
       grep -v "^\..*/$" |\
@@ -18,9 +18,16 @@ for DIR in $(find maven -type d  \( ! -regex '.*/\..*' \)); do
 done
 
 for DIR in $(find . -type d \( ! -regex '.*/\..*' \)); do
-	if([ ! -f ${DIR}/index.html ]);
+	if [ ! -f ${DIR}/index.html ]
+	then
+		generate_directory_index $DIR
+	else
+		contents=`cat $DIR/index.html`
+		
+		if [[ "$contents" == *autogen* ]]
 		then
 			generate_directory_index $DIR
+		fi
 	fi
 done
 
