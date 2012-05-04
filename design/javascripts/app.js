@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
 	});
 
     //copy hex to clipboard on click (desktop machines only, requires flash)
-    $('li').each(function(index) {
+    /*$('li').each(function(index) {
     	$(this).zclip({
 	        path:'../javascripts/ZeroClipboard.swf',
 	        copy:$(this).children().filter("p:first").text(),
@@ -24,5 +24,5 @@ jQuery(document).ready(function ($) {
         
 	    });
 
-	});
+	});*/
 });
