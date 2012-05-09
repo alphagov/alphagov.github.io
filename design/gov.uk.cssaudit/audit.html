@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<head>
+<link href="https://d17tffe05zdvwj.cloudfront.net/static/application-c98b0f836bb9e57ae7ec51d36dedf224.css" media="screen" rel="stylesheet" type="text/css">
+<!-- alternatives --><link class="wordsdifficult" href="https://d17tffe05zdvwj.cloudfront.net/static/wordsdifficult-ed25a7ddb7892df5392b85f0c6cf87b9.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
+<link href="https://d17tffe05zdvwj.cloudfront.net/static/core-print-5312c77dece6a94fd312c78c63ed7c4e.css" media="print" rel="stylesheet" type="text/css">
+<link href="audit.css" media="screen" rel="stylesheet" type="text/css" />
+<head>
+<body>
+
+<div class="ui-element citizen">
+	<h1>div.summary</h1>
+		<div id="wrapper" class="wrapper">
+		    <section id="content" role="main" class="ancillary">
+		    	<div class="summary">
+			      <p>This is an example of a div.summary element at the top of the page.</p>
+				</div>
+		    </section>
+		</div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>body<span class="h-a">.citizen</span> > div<span class="h-b">#wrapper</span> > section<span class="h-c">.ancillary</span> > div<span class="h-d">.summary</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>The above example relies on a class of .citizen attached to a parent element. Which seems to be attached to the body.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+					<code>
+					&lt;body class="<span class="h-a">citizen</span>"&gt;<br />
+					&lt;div id="<span class="h-b">wrapper</span>" class="wrapper"&gt;<br />
+				    &lt;section id="content" role="main" class="<span class="h-c">ancillary</span>"&gt;<br />
+			    	&lt;div class="<span class="h-d">summary</span>"&gt;<br />
+				    &lt;p&gt;Content.&lt;/p&gt;<br />
+					&lt;/div&gt;<br />
+			    	&lt;/section&gt;<br />
+					&lt;/div&gt;<br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+					  <span class="h-b">#wrapper</span> <span class="h-c">.ancillary</span> <span class="h-d">.summary</span> {<br />
+					  color: #2E3191;<br />
+					}<br />
+					<span class="h-a">.citizen</span> <span class="h-c">.ancillary</span> <span class="h-d">.summary</span> {<br />
+					  margin-bottom: 2em;<br />
+					}<br />
+					<span class="h-a">.citizen</span> article <span class="h-d">.summary</span>, <span class="h-a">.citizen</span> <span class="h-c">.ancillary</span> <span class="h-d">.summary</span> {<br />
+					  background-color: #D5E8F4;<br />
+					  padding: 1em;<br />
+					  <del>margin-bottom: 1em;</del><br />
+					}<br />
+					// Other styles inherited from generic html, body etc declarations.<br />
+					<span class="h-b">#wrapper</span> <span class="h-c">.ancillary</span> <span class="h-d">.summary</span> p {<br />
+					  line-height: 1.5em;<br />
+					}<br />
+					article <span class="h-d">.summary</span> p, article <span class="h-d">.summary</span> h2, <span class="h-a">.citizen</span> <span class="h-c">.ancillary</span> <span class="h-d">.summary</span> p, <span class="h-a">.citizen</span> <span class="h-c">.ancillary</span> <span class="h-d">.summary</span> h2 {<br />
+					  background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/summary-arrow-973c492320f8586f57fbfd11ae8f8881.png);<br />
+					  background-position: 0 0.3em;<br />
+					  background-repeat: no-repeat;<br />
+					  border: none;<br />
+					  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+					  font-size: 1.25em;<br />
+					  margin: 0 0.75em 0 0;<br />
+					  min-height: 2.75em;<br />
+					  padding: 0 0 0 2.5em;<br />
+					  }
+					</code>
+				</div>
+			</div>
+</div>
+
+
+<div class="ui-element">
+	<h1 id="get-started-header">div.get-started-intro</h1>
+		<article style="height: auto;"><!-- inline height style added for demo purposes -->
+      <div class="inner">
+      <section class="intro">
+      	<div class="get-started-intro">
+		<p>Subsection intro text.</p>
+		</div>
+        <p class="visuallyhidden"><a href="#what-you-need-to-know">What you need to know</a></p>
+        <script type="text/javascript">utmx_section("Get started button")</script>
+        <p id="get-started" class="get-started group">
+           <a href="https://www.taxdisc.direct.gov.uk/EvlPortalApp/app/home/intro?skin=directgov" rel="external" class="button">
+             <span class="button-content"><span class="call-to-action">Get started</span><span class="destination">on the Directgov website</span></span><span class="indicator"></span>
+           </a>
+        </p>
+        </noscript> 
+      </section>
+    </div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p><span class="h-a">artcle</span> > div<span class="h-b">.inner</span> > section<span class="h-c">.intro</span> > div<span class="h-d">.get-started-intro</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>The above example relies on having an article parent element. Other depencies can be seen in the specificity of the css.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+					<code>
+						&lt;<span class="h-a">article</span>&gt;<br />
+						&lt;div class="<span class="h-b">inner</span>"&gt;<br />
+						&lt;section class="<span class="h-c">intro</span>"&gt;<br />
+						&lt;div class="<span class="h-d">get-started-intro</span>"&gt;<br />
+						&lt;p&gt;Subsection intro text.&lt;/p&gt;<br />
+						&lt;/div&gt;<br />
+						&lt;p class="visuallyhidden"&gt;&lt;a href="#what-you-need-to-know">What you need to know&lt;/a&gt;&lt;/p&gt;<br />
+						        &lt;script type="text/javascript"&gt;utmx_section("Get started button")&lt;/script&gt;<br />
+						        &lt;p id="get-started" class="get-started group"&gt;<br />
+						           &lt;a href="https://www.taxdisc.direct.gov.uk/EvlPortalApp/app/home/intro?skin=directgov" rel="external" class="button"&gt;<br />
+						             &lt;span class="button-content"&gt;&lt;span class="call-to-action"&gt;Get started&lt;/span&gt;&lt;span class="destination"&gt;on the Directgov website&lt;/span&gt;&lt;/span&gt;&lt;span class="indicator"&gt;&lt;/span&gt;<br />
+						           &lt;/a&gt;<br />
+						        &lt;/p&gt;<br />
+						        &lt;/noscript&gt;<br /> 
+						&lt;/section&gt;<br />
+						&lt;/div&gt;<br />
+						&lt;/article&gt;<br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					  <code>
+					  <span class="h-a">article</span> <span class="h-b">.inner</span> {<br />
+					  padding: 0 5em 2em 5em;<br />
+					  width: auto;<br />
+					  }<br />
+					  <span class="h-b">.inner</span> {<br />
+					  margin: 0 auto;<br />
+					  padding: 1em;<br />
+					  position: relative;<br />
+					  }<br />
+					  <span class="h-a">article</span> <span class="h-c">.intro</span> {<br />
+					  background-color: #D9E0E0;<br />
+					  margin-bottom: 1.5em;<br />
+					  padding: 1em;<br />
+					  }<br />
+					  <span class="h-a">article</span> <span class="h-c">.intro</span> p { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }<br />
+					  .get-started {<br />
+					  margin: 0;<br />
+					  text-align: center;<br />
+					  }<br />
+					  <span class="h-a">article</span> p {<br />
+					  font-size: 112.5%;<br />
+					  }<br />
+					  <span class="h-a">article</span> p, <span class="h-a">article</span> ul, <span class="h-a">article</span> ol {<br />
+					  <del>font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;</del><br />
+					  line-height: 1.5em;<br />
+					  <del>margin: 0.75em 0;</del><br />
+					  }<br />
+					  .get-started .button {<br />
+					  font-family: 'Gill Sans W01 Medium', sans-serif;<br />
+					  margin: 0.75em 0 0 0;<br />
+					  max-width: 60%;<br />
+					  position: relative;<br />
+					  }<br />
+					  .button, .button:visited {<br />
+					  background-color: #B01117;<br />
+					  background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/button-overlay-e41aa29f6f02a347c2a33e6f2cbac961.png);<br />
+					  _background-image: none;<br />
+					  background-position: 0 100%;<br />
+					  background-repeat: repeat-x;<br />
+					  border: solid 1px #B01117;<br />
+					  -webkit-border-radius: 2px;<br />
+					  -moz-border-radius: 2px;<br />
+					  border-radius: 2px;<br />
+					  color: white;<br />
+					  cursor: pointer;<br />
+					  display: inline-block;<br />
+					  padding: 0.5em 0.75em;<br />
+					  <del>position: relative;</del><br />
+					  text-decoration: none;<br />
+					  -webkit-transition: background-color 0.5s ease-in-out;<br />
+					  -moz-transition: background-color 0.5s ease-in-out;<br />
+					  }<br />
+					  button:hover {<br />
+					  background-color: #DD322D;<br />
+					  border: 1px solid #760418;<br />
+					  color: #ffffff;<br />
+					  }<br />
+					  .get-started .button .call-to-action {<br />
+					  background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/button-arrow-d7e46fca5a640cbc65ed7dc18bf5db88.png);<br />
+					  background-position: 100% 50%;<br />
+					  background-repeat: no-repeat;<br />
+					  display: block;<br />
+					  font-size: 1.5em;<br />
+					  letter-spacing: 0.15em;<br />
+					  margin: 0 auto;<br />
+					  padding: 0.325em 1.5em 0.325em 0;<br />
+					  text-transform: uppercase;<br />
+					  }<br />
+					  .get-started .button .destination {<br />
+					  display: block;<br />
+					  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+					  letter-spacing: 0;<br />
+					  margin: 0.25em 0 0 0;<br />
+					  opacity: 0.75;<br />
+					  text-transform: none;<br />
+					  }<br />
+					  .get-started .button .button-content {<br />
+					  display: inline-block;<br />
+					  vertical-align: middle;<br />
+					  }<br />
+
+					  </code>
+				</div>
+			</div>
+			</article>
+</div>
+
+
+<div class="ui-element">
+	<h1>form.find-location-for-service nested inside div.get-started-intro</h1>
+	<article>
+          <section class="intro"><div class="get-started-intro">
+
+            <p>Pay Council Tax online or by other methods such as direct debit. </p>
+
+
+            <form method="post" id="local-locator-form" class="find-location-for-service">
+              <fieldset>
+<legend class="visuallyhidden">Postcode lookup</legend>
+
+                <div class="location_error error-notification hidden"></div>
+                <div class="ask_location">
+                  <label for="postcode">Enter a UK postcode <input class="postcode" name="postcode" type="text" placeholder="e.g. SW1A 2AA"></label>
+                  <input type="submit" value="Find" class="button">
+</div>
+
+                <div class="finding_location hidden">
+                  <p>Locating you…</p>
+                </div>
+                <div class="found_location hidden">
+                  <p class="friendly-name">Your location is set to <strong></strong>.<br><a class="change-location" href="">Change your location</a></p>
+                </div>
+              </fieldset>
+            </form>
+          </section>
+
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>form<span class="h-a">.find-location-for-service</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>As shown above the div.get-started-intro parent element relies on an article parent element. The form.find-location-for-service is an independant element. For CSS for parent element see above <a href="#get-started-header">div.get-started-intro</a></p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+					<code>
+					&lt;article&gt;<br />
+			        &lt;section class="intro"&gt;&lt;div class="get-started-intro"&gt;<br />
+		            &lt;p&gt;Pay Council Tax online or by other methods such as direct debit. &lt;/p&gt;<br />
+		            &lt;form method="post" id="local-locator-form" class="<span class="h-a">find-location-for-service</span>"&gt;<br />
+		            &lt;fieldset&gt;<br />
+					&lt;legend class="visuallyhidden"&gt;Postcode lookup&lt;/legend&gt;<br />
+	                &lt;div class="location_error error-notification hidden"&gt;&lt;/div&gt;<br />
+	                &lt;div class="ask_location"&gt;<br />
+	                &lt;label for="postcode"&gt;Enter a UK postcode &lt;input class="postcode" name="postcode" type="text" placeholder="e.g. SW1A 2AA"&gt;&lt;/label&gt;<br />
+	                &lt;input type="submit" value="Find" class="button"&gt;<br />
+					&lt;/div&gt;<br />
+	                &lt;div class="finding_location hidden"&gt;<br />
+	                &lt;p&gt;Locating you&hellip;&lt;/p&gt;<br />
+	                &lt;/div&gt;<br />
+	                &lt;div class="found_location hidden"&gt;<br />
+	                &lt;p class="friendly-name">Your location is set to &lt;strong&gt;&lt;/strong&gt;.<br>&lt;a class="change-location" href=""&gt;Change your location&lt;/a&gt;&lt;/p&gt;<br />
+	                &lt;/div&gt;<br />
+		            &lt;/fieldset&gt;<br />
+		            &lt;/form&gt;<br />
+			        &lt;/section&gt;<br />
+  					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+					<span class="h-a">.find-location-for-service</span> {<br />
+					background: #F8F8F8 url(https://d17tffe05zdvwj.cloudfront.net/static/locator-icon-182bf377ff7b9051a8092677cfaaebb0.png) no-repeat 1em 1em;<br />
+					border: none;<br />
+					margin: 1.2em 0;<br />
+					padding: 1.2em 0.75em 1.2em 3.5em;<br />
+					position: relative;<br />
+					}<br />
+					// fieldset inherits generic fieldset CSS.<br />
+
+					</code>
+				</div>
+			</div>
+			</article>
+</div>
+
+
+
+
+<div class="ui-element">
+	<h1>div.highlight-answer</h1>
+	      <div class="highlight-answer">
+		      <p>The standard <abbr title="Value Added Tax">VAT</abbr> rate is <em>20%</em></p>
+	      </div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>div<span class="h-a">.highlight-answer</span> > <span class="h-b">p</span> > <span class="h-c">em</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+					<code>
+				      &lt;div class="<span class="h-a">highlight-answer</span>"&gt;<br />
+				      &lt;<span class="h-b">p</span>&gt;The standard &lt;abbr title="Value Added Tax"&gt;VAT&lt;/abbr&gt; rate is &lt;<span class="h-c">em</span>&gt;20%&lt;/em&gt;&lt;/p&gt;<br />
+				      &lt;/div&gt;<br />
+  					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+				      <span class="h-a">.highlight-answer</span> {<br />
+				      background-color: #D33883;<br />
+				      color: white;<br />
+				      text-align: center;<br />
+				      padding: 0.1em 2em 0.2em 2em;<br />
+				      margin-bottom: 1em;<br />
+				      }<br />
+				      <span class="h-a">.highlight-answer</span> <span class="h-b">p</span> {<br />
+				      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+				      line-height: 2.3em;<br />
+				      color: white;<br />
+				      font-size: 1.5em;<br />
+				      }<br />
+				      abbr[title] { border-bottom: 1px dotted; }<br />
+				      <span class="h-a">.highlight-answer</span> <span class="h-b">p</span> <span class="h-c">em</span> {<br />
+				      font-size: 3em;<br />
+				      font-style: normal;<br />
+				      font-weight: bold;<br />
+				      display: block;<br />
+				      margin-bottom: 0.5em;<br />
+				      color: white;<br />
+				      }<br />
+					</code>
+				</div>
+			</div>
+</div>
+
+<div class="ui-element">
+	<h1>div.highlight-event</h1>
+                <div class="highlighted-event">
+                  <p><span>Early May bank holiday</span>
+                   7 May</p>
+                </div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>div.highlight-event > p > span</p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as div.highlight-answer example above.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+		                &lt;div class="highlighted-event"&gt;<br />
+		                &lt;p&gt;&lt;span&gt;Early May bank holiday&lt;/span&gt;<br />
+		                7 May&lt;/p&gt;<br />
+		                &lt;/div&gt;
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+		                .highlighted-event {<br />
+		                background-color: #D33883;<br />
+		                color: white;<br />
+		                text-align: center;<br />
+		                padding: 0.1em 2em 0.2em 2em;<br />
+		                margin-bottom: 1em;<br />
+		                }<br />
+		                .highlighted-event p {<br />
+		                font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+		                font-size: 4.8em;<br />
+		                font-weight: bold;<br />
+		                line-height: 0.70em;<br />
+		                }<br />
+		                .highlighted-event p span {<br />
+		                font-size: 0.4em;<br />
+		                font-weight: normal;<br />
+		                display: block;<br />
+		                margin-top: -0.7em;<br />
+		                margin-bottom: 0.2em;<br />
+		                }<br />
+		                // P inherits margin: 0.75em 0; from article p, article ul, article ol:
+					</code>
+				</div>
+			</div>
+</div>
+
+<div class="ui-element">
+	<h1>div.info-notice div.help-notice </h1>
+			<article>
+			<div class="info-notice">
+				<p>This is an example of div.info-notice. This element relies on being inside an article to be styled correctly.</p>
+			</div>
+			<div class="help-notice">
+				<p>This is an example of div.help-notice. Different class simply for different background image.</p>
+			</div>
+			<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p><span class="h-a">article</span> > div<span class="h-b">.info-notice</span> > <span class="h-c">p</span><br />
+				or<br />
+				<span class="h-a">article</span> > div<span class="h-b">.help-notice</span> > <span class="h-c">p</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>These elements rely on an article parent element.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+        	        	&lt;<span class="h-a">article</span>&gt;
+						&lt;div class="application-notice <span class="h-b">info-notice</span>"&gt;<br />
+						&lt;<span class="h-c">p</span>&gt;Copy here.&lt;/p&gt;<br />
+						&lt;/div&gt;<br />
+        	        	&lt;/article&gt;
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+						<span class="h-a">article</span> <span class="h-b">.info-notice</span> {<br />
+						background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-information-b36ef9b34945840780fd39ff077992b1.png) 1em 50% no-repeat;<br />
+						}<br />
+						<span class="h-a">article</span> <span class="h-b">.help-notice</span> {<br />
+						background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-important-37909242b73c67921639e6fe60f3c792.png) 0.75em 50% no-repeat;<br />
+						}<br />
+						<span class="h-a">article</span> <span class="h-b">.help-notice</span>, <span class="h-a">article</span> <span class="h-b">.info-notice</span> {<br />
+						border: 1px solid #93A1A1;<br />
+						margin: 0.75em 0;<br />
+						padding: 0.5em 1em 0.5em 3.5em;<br />
+						}<br />
+						<span class="h-a">article</span> <span class="h-b">.help-notice</span> <span class="h-c">p</span>, <span class="h-a">article</span> <span class="h-b">.info-notice</span> <span class="h-c">p</span> {<br />
+						font-size: 1em;<br />
+						margin: 0;<br />
+						}<br />
+					</code>
+				</div>
+			</div>
+</article>
+</div>
+
+
+<div class="ui-element">
+	<h1 id="div-contact">div.contact</h1>
+		<div class="contact">
+		<p><strong>Telephone:</strong> 0300 123 4321<br>
+		<strong>Textphone:</strong> 0300 790 6201</p>
+		</div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>div.<span class="h-a">contact</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as div.highlight-answer example above.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+						&lt;div class="<span class="h-a">contact</span>"&gt;<br />
+						&lt;p&gt;&lt;strong&gt;Telephone:&lt;/strong&gt; 0300 123 4321&lt;br&gt;<br />
+						&lt;strong&gt;Textphone:&lt;/strong&gt; 0300 790 6201&lt;/p&gt;<br />
+						&lt;/div&gt;
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+						<span class="h-a">.contact</span> {<br />
+						background-color: white;<br />
+						border: solid 1px #93A1A1;<br />
+						box-sizing: border-box;<br />
+						margin: 0.75em 0;<br />
+						padding: 0.25em 1em;<br />
+						min-width: 60%;<br />
+						}<br />
+					</code>
+				</div>
+			</div>
+</div>
+
+
+<div class="ui-element">
+	<h1>div.subscribe</h1>
+		<div class="subscribe">
+		  <p>Add dates to your calendar: <a href="/bank-holidays/england-and-wales-2013.ics" title="Download these dates so you can add them to a calendar application such as iCal or Outlook">Bank holidays for 2013 in England and Wales</a>.</p>
+		</div>
+		<h2>Found on</h2>
+		<p><a href="https://www.gov.uk/bank-holidays">/bank-holidays</a></p>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>div<span class="h-a">.subscribe</span> > <span class="h-b">p</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This is an independant element. Shares the same styling as <a href="#div-contact">div.contact</a>. For some reason it's not working in this example.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+						&lt;div class="subscribe"&gt;<br />
+						&lt;p&gt;Add dates to your calendar: &lt;a href="/bank-holidays/england-and-wales-2013.ics" title="Download these dates so you can add them to a calendar application such as iCal or Outlook"&gt;Bank holidays for 2013 in England and Wales&lt;/a&gt;.&lt;/p&gt;<br />
+						&lt;/div&gt;<br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+						.subscribe {<br />
+						border: 1px solid #93A1A1;<br />
+						margin: 1em auto;<br />
+						padding: 0.5em 0.75em;<br />
+						}<br />
+						.subscribe p {<br />
+						font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+						font-size: 0.85em;<br />
+						margin: 0;<br />
+						}<br />
+					</code>
+				</div>
+			</div>
+</div>
+
+
+
+
+<div class="ui-element">
+	<h1>nav.pagination</h1>
+        <nav class="pagination" role="navigation">
+        <ul class="group">
+          <li class="first">
+          <span>You are at the beginning of this guide</span>
+          </li>
+          <li class="next">
+          <a href="/after-a-death/register-the-death" title="Navigate to next part" rel="next"><span class="pagination-label">Part 2</span> <span class="pagination-part-title">Register the death</span></a>
+          </li>
+        </ul>
+        </nav>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>nav.<span class="h-a">pagination</span> > <span class="h-b">ul</span> > <span class="h-c">li</span> > <span class="h-d">span</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This nav.pagination element is independant.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+				        &lt;nav class="<span class="h-a">pagination</span>" role="navigation"&gt;<br />
+				        &lt;<span class="h-b">ul</span> class="group"&gt;<br />
+				        &lt;<span class="h-c">li</span> class="first"&gt;<br />
+				        &lt;<span class="h-d">span</span>&gt;You are at the beginning of this guide&lt;/span&gt;<br />
+				        &lt;/li&gt;<br />
+				        &lt;<span class="h-c">li</span> class="next"&gt;<br />
+				        &lt;a href="/after-a-death/register-the-death" title="Navigate to next part" rel="next">&lt;<span class="h-d">span</span> class="pagination-label">Part 2&lt;/span&gt; &lt;<span class="h-b">span</span> class="pagination-part-title"&gt;Register the death&lt;/span&gt;&lt;/a&gt;<br />
+				        &lt;/li&gt;<br />
+				        &lt;/ul&gt;<br />
+				        &lt;/nav&gt;<br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+				        <span class="h-a">.pagination</span> {<br />
+				        display: block;<br />
+				        margin: 2em 0 0 0;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> .first <span class="h-d">span</span>, .pagination .last <span class="h-d">span</span> {<br />
+				        display: block;<br />
+				        min-height: 4.5em;<br />
+				        padding: 0.75em 5%;<br />
+				        width: 90%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-b">ul</span> {<br />
+				        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+				        margin: 0;<br />
+				        padding: 0;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> {<br />
+				        float: left;<br />
+				        font-size: 1em;<br />
+				        list-style: none;<br />
+				        text-align: right;<br />
+				        margin: 0;<br />
+				        padding: 0;<br />
+				        width: 48.5%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span>:first-child {<br />
+				        margin-right: 3%;<br />
+				        text-align: left;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> .next a {<br />
+				        background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/section-divider-arrow-c5703368e8bcf63f5b20a64b6242f3be.png);<br />
+				        background-position: 95% 50%;<br />
+				        background-repeat: no-repeat;<br />
+				        padding: 0.75em 15% 0.75em 5%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a {<br />
+				        background-color: #E1E8E8;<br />
+				        display: block;<br />
+				        float: left;<br />
+				        min-height: 4.5em;<br />
+				        text-decoration: none;<br />
+				        width: 80%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a:hover {<br />
+				        background-color: #97C5E5;<br />
+				        color: #ffffff;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a .pagination-part-title {<br />
+						text-decoration: underline;<br />
+						}<br />
+					</code>
+				</div>
+			</div>
+</div>
+
+
+
+<div class="ui-element">
+	<h1>div.form-download</h1>
+	<article>
+		<div class="form-download">
+		<p><a href="http://www.direct.gov.uk/prod_consum_dg/groups/dg_digitalassets/@dg/@en/documents/digitalasset/dg_176233.pdf" title="Download form ACR 105 ‘Entry in Adoption Contact Register - adopted people’ (PDF, 92KB)" rel="external">Download form ACR 105 - &lsquo;Entry in Adoption Contact Register - adopted people&rsquo; (PDF, 92KB)</a></p>
+		</div>
+		<h2>Found on</h2>
+		<p><a href="https://www.gov.uk/look-up-adoption-records">/look-up-adoption-records</a></p>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p> <span class="h-a">article</span> > div.<span class="h-b">form-download</span> > <span class="h-c">p</span> > <span class="h-d">a</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This relies on an article parent element. The majority of the styling is on the a.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+        	        	&lt;<span class="h-a">article</span>&gt;
+						&lt;div class="<span class="h-b">form-download</span>"&gt;<br />
+						&lt;<span class="h-c">p</span>&gt;&lt;<span class="h-d">a</span> href="#" title="Download form ACR 105 ‘Entry in Adoption Contact Register - adopted people’ (PDF, 92KB)" rel="external"&gt;Download form ACR 105 - &lsquo;Entry in Adoption Contact Register - adopted people&rsquo; (PDF, 92KB)&lt;/a&gt;&lt;/p&gt;<br />
+						&lt;/div><br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+						<span class="h-a">article</span> <span class="h-b">.form-download</span> <span class="h-c">p</span> {<br />
+						margin: 0 0;<br />
+						}<br />
+						<span class="h-a">article</span> <span class="h-b">.form-download</span> <span class="h-d">a</span> {<br />
+						background-color: #D9E0E0;<br />
+						background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-file-download-711fe58454148529dbd85f876f59ba82.png);<br />
+						background-position: 1em 50%;<br />
+						background-repeat: no-repeat;<br />
+						color: black;<br />
+						display: block;<br />
+						font-size: 0.85em;<br />
+						line-height: 1.5em;<br />
+						margin: 1em 0;<br />
+						padding: 0.75em 0 0.75em 3em;<br />
+						}<br />
+					</code>
+				</div>
+			</div>
+		</article>
+</div>
+
+
+
+<div class="ui-element">
+	<h1>table.calendar</h1>
+	<article>
+<table class="calendar">
+<caption>
+    2012 bank holidays in England and Wales
+  </caption>
+  <thead><tr>
+<th scope="col">Date</th>
+      <th scope="col">Day</th>
+      <th scope="col">Holiday Name</th>
+      <th scope="col">Notes</th>
+    </tr></thead>
+<tbody>
+<tr>
+<td class="calendar_date">02 January</td>
+        <td class="calendar_day">Monday</td>
+        <td class="calendar_title">New Year&rsquo;s Day</td>
+        <td class="calendar_notes"><small>Substitute day</small></td>
+      </tr>
+<!--tr>
+<td class="calendar_date">06 April</td>
+        <td class="calendar_day">Friday</td>
+        <td class="calendar_title">Good Friday</td>
+        <td class="calendar_notes"><small></small></td>
+      </tr>
+<tr>
+<td class="calendar_date">09 April</td>
+        <td class="calendar_day">Monday</td>
+        <td class="calendar_title">Easter Monday</td>
+        <td class="calendar_notes"><small></small></td>
+      </tr>
+<tr>
+<td class="calendar_date">07 May</td>
+        <td class="calendar_day">Monday</td>
+        <td class="calendar_title">Early May bank holiday</td>
+        <td class="calendar_notes"><small></small></td>
+      </tr>
+<tr>
+<td class="calendar_date">04 June</td>
+        <td class="calendar_day">Monday</td>
+        <td class="calendar_title">Spring bank holiday</td>
+        <td class="calendar_notes"><small>Substitute day</small></td>
+      </tr>
+<tr>
+<td class="calendar_date">05 June</td>
+        <td class="calendar_day">Tuesday</td>
+        <td class="calendar_title">Queen’s Diamond Jubilee</td>
+        <td class="calendar_notes"><small>Extra bank holiday</small></td>
+      </tr>
+<tr>
+<td class="calendar_date">27 August</td>
+        <td class="calendar_day">Monday</td>
+        <td class="calendar_title">Summer bank holiday</td>
+        <td class="calendar_notes"><small></small></td>
+      </tr>
+<tr>
+<td class="calendar_date">25 December</td>
+        <td class="calendar_day">Tuesday</td>
+        <td class="calendar_title">Christmas Day</td>
+        <td class="calendar_notes"><small></small></td>
+      </tr>
+<tr>
+<td class="calendar_date">26 December</td>
+        <td class="calendar_day">Wednesday</td>
+        <td class="calendar_title">Boxing Day</td>
+        <td class="calendar_notes"><small></small></td>
+      </tr-->
+</tbody>
+</table>
+		<h2>Found on</h2>
+		<p><a href="https://www.gov.uk/bank-holidays">/bank-holidays</a></p>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p><span class="h-a">article</span> > table<span class="h-b">.calendar</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This table relies on an article parent element. The following classes attached to td's are redundant for styling purposes - calendar_date, calendar_day, calendar_title and calendar_notes.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+				    <code>
+						&lt;article&gt;<br />
+						&lt;table class="calendar"&gt;<br />
+						&lt;caption&gt;2012 bank holidays in England and Wales&lt;/caption&gt;<br />
+						&lt;thead&gt;&lt;tr&gt;<br />
+						&lt;th scope="col"&gt;Date&lt;/th&gt;<br />
+						&lt;th scope="col"&gt;Day&lt;/th&gt;<br />
+						&lt;th scope="col"&gt;Holiday Name&lt;/th&gt;<br />
+						&lt;th scope="col"&gt;Notes&lt;/th&gt;<br />
+						&lt;/tr&gt;&lt;/thead&gt;<br />
+						&lt;tbody&gt;<br />
+						&lt;tr&gt;<br />
+						&lt;td class="calendar_date"&gt;02 January&lt;/td&gt;<br />
+						&lt;td class="calendar_day"&gt;Monday&lt;/td&gt;<br />
+						&lt;td class="calendar_title"&gt;New Year&rsquo;s Day&lt;/td&gt;<br />
+						&lt;td class="calendar_notes"&gt;&lt;small&gt;Substitute day&lt;/small&gt;&lt;/td&gt;<br />
+						&lt;/tr&gt;<br />
+						&lt;/tbody&gt;<br />
+						&lt;/table&gt;<br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+article table.calendar {<br />
+background-color: inherit;<br />
+margin: 1em auto 2em;<br />
+width: 100%;<br />
+}<br />
+article table {<br />
+border-collapse: collapse;<br />
+border-spacing: 0;<br />
+<del>margin: 0 0 1em;</del><br />
+padding: 0;<br />
+<del>width: 100%;</del><br />
+<del>margin-top: 0;</del><br />
+}<br />
+article table caption {<br />
+font-size: 1.25em;<br />
+font-weight: bold;<br />
+margin-bottom: 0.5em;<br />
+}<br />
+article th {<br />
+text-align: left;<br />
+color: white;<br />
+font-weight: normal;<br />
+background-color: #0A3641;<br />
+border: solid 2px white;<br />
+}<br />
+article td {<br />
+background: #E1E8E8;<br />
+border: solid 2px white;<br />
+}<br />
+article td {<br />
+padding: 0.6em 0.5em;<br />
+}<br />
+article th, article td {<br />
+vertical-align: top;<br />
+line-height: 1.3em;<br />
+}<br />
+					</code>
+				</div>
+			</div>
+	</article>
+</div>
+
+
+
+<div class="ui-element">
+	<h1>div.form-download</h1>
+	<article>
+	<div class="address vcard">
+	<div class="adr org fn">
+	<p>
+	Office for Judicial Complaints
+	<br>Steel House
+	<br>11 Tothill Street
+	<br>London
+	<br>SW1H 9LJ
+	<br></p>
+	</div>
+	</div>		
+		<h2>Found on</h2>
+		<p><a href="https://www.gov.uk/complain-judge-magistrate-tribunal-coroner">/complain-judge-magistrate-tribunal-coroner</a> <a href="https://www.gov.uk/complain-about-legal-adviser">/complain-about-legal-adviser</a> <a href="https://www.gov.uk/find-out-what-prison-someone-is-in">/find-out-what-prison-someone-is-in</a> <a href="https://www.gov.uk/report-benefit-fraud">/report-benefit-fraud</a></p>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p> <span class="h-a">article</span> > div.<span class="h-b">address</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This relies on an article parent element.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+						&lt;<span class="h-a">article</span>&gt;<br />
+						&lt;div class="<span class="h-b">address</span> vcard"&gt;<br />
+						&lt;div class="adr org fn"&gt;<br />
+						&lt;p&gt;<br />
+						Office for Judicial Complaints<br />
+						&lt;br&gt;Steel House<br />
+						&lt;br&gt;11 Tothill Street<br />
+						&lt;br&gt;London<br />
+						&lt;br&gt;SW1H 9LJ<br />
+						&lt;br&gt;&lt;/p&gt;<br />
+						&lt;/div&gt;<br />
+						&lt;/div&gt;<br />
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+						<span class="h-a">article</span> <span class="h-b">.address</span> {<br />
+						background: #F2F2F2 url(https://d17tffe05zdvwj.cloudfront.net/static/stamp-95113318674439930f43d6a62a6b400e.png) 95% 1em no-repeat;<br />
+						border: solid 1px #D6D6D6;<br />
+						margin: 0.75em 0;<br />
+						padding: 2em 16% 2em 15%;<br />
+						min-width: 35%;<br />
+						}<br />
+					</code>
+				</div>
+			</div>
+		</article>
+</div>
+
+
+
+
+<div class="ui-element">
+	<h1>div.related</h1>
+	<div style="position: relative; height: 150px; border: 1px solid #dedede; margin-bottom: 50px;"><!-- div with inline styles as child element is positioned absolutely and requires either a relatively or absolutely positioned parent -->
+		<div class="related sections-list" style="z-index: 10;"><!-- inline style added for demo purposes -->
+			<div class="inner group">
+				<h2>Related section example</h2>
+					<ul>
+					<li><a href="/browse/">This is a related</a></li>
+					<li><a href="/browse/">right-hand side section</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>div.<span class="h-a">related</span> > div<span class="h-b">.inner</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as div.highlight-answer example above.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+					    &lt;div class="<span class="h-a">related</span> sections-list"&gt;<br />
+					    &lt;div class="<span class="h-b">inner</span> group"&gt;<br />
+					    &lt;h2&gt;Related section example&lt;/h2&gt;<br />
+					    &lt;ul&gt;<br />
+					    &lt;li&gt;&lt;a href="#"&gt;List item&lt;/a&gt;&lt;/li&gt;<br />
+					    &lt;/ul&gt;<br />
+					    &lt;/div&gt;<br />
+					    &lt;/div&gt;
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+					    <span class="h-a">.related</span> {<br />
+					    position: absolute;<br />
+					    right: 0;<br />
+					    width: 16.5em;<br />
+						}<br />
+					    <span class="h-a">.related</span> <span class="h-b">.inner</span> {<br />
+					    background-color: #F0E7D5;<br />
+					    padding: 0 1em 0.25em 1.5em;<br />
+					    width: auto;<br />
+					    }
+					</code>
+				</div>
+			</div>
+</div>
+
+
+
+
+
+</body>
+</html>

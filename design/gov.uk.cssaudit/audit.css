@@ -1,0 +1,42 @@
+html body { margin: 0; padding: 0; background-color: #fff;}
+
+.ui-element {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	padding: 40px 10% 40px 10%;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.ui-element h1 {
+	margin-bottom: 30px;
+}
+
+.notes, .code { overflow: hidden; clear: both; word-wrap: break-word;}
+.notes div, .code div {
+	float: left;
+	display: inline;
+	width: 48%;
+}
+.notes div:nth-child(2), .code div:nth-child(2) {
+	float: right;
+}
+
+.code div code { background-color: #F2F2F2; padding: 10px 15px; display: block; }
+.code div.css code { background-color: #ccc; }
+
+
+/* colour coding */
+span.h-a { color: #D33883;}
+span.h-b { color: #39CC10;}
+span.h-c { color: #4CC8CF;}
+span.h-d { color: #B24CCF;}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (max-width : 768px) {
+.notes div, .code div { float: none; display: block; width: auto; }
+.notes div:nth-child(2), .code div:nth-child(2) { float: left; }
+}
