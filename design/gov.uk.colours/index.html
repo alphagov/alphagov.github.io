@@ -38,7 +38,8 @@
     <div class="row">
       <div class="twelve columns">
         <h1>GOV.UK &mdash; Colours</h1>
-        <p class="clipboard notice">Click a colour to copy its hex value to your clipboard.</p>      
+        <p class="clipboard notice show-on-desktops">Click a colour to copy its hex value to your clipboard.</p>   
+        <div id="check_for_flash_blocker"></div>   
       </div>
     </div>
 
@@ -278,6 +279,12 @@
 
   <!-- Included JS Files -->
   <script src="../javascripts/flash.detect.min.js"></script>
+  <script src="../javascripts/swfobject.js"></script>
+  
+  <script type="text/javascript">
+  swfobject.embedSWF("../javascripts/flash.block.detect.swf", "check_for_flash_blocker", "1", "1", "10.0.0");
+  </script>
+  
   <script src="../javascripts/jquery.min.js"></script>
   <script src="../javascripts/foundation.js"></script>
   <script src="../javascripts/jquery.zclip.min.js"></script>
