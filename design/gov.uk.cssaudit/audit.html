@@ -23,7 +23,7 @@
 		</div>
 		<div>
 			<h2>Notes</h2>
-			<p>The above example relies on a class of .citizen attached to a parent element. Which seems to be attached to the body.</p>
+			<p>The above example relies on a class of .citizen attached to a parent element. Which is attached to the body.</p>
 		</div>
 	</div>
 			<div class="code">
@@ -303,7 +303,7 @@
 
 
 <div class="ui-element">
-	<h1>div.highlight-answer</h1>
+	<h1 id="highlight-answer-header">div.highlight-answer</h1>
 	      <div class="highlight-answer">
 		      <p>The standard <abbr title="Value Added Tax">VAT</abbr> rate is <em>20%</em></p>
 	      </div>
@@ -369,7 +369,7 @@
 		</div>
 		<div>
 			<h2>Notes</h2>
-			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as div.highlight-answer example above.</p>
+			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as <a href="highlight-answer-header">div.highlight-answer</a> example above.</p>
 		</div>
 	</div>
 			<div class="code">
@@ -410,6 +410,65 @@
 				</div>
 			</div>
 </div>
+
+
+<div class="ui-element">
+	<h1>div.related</h1>
+	<div style="position: relative; height: 150px; border: 1px solid #dedede; margin-bottom: 50px;"><!-- div with inline styles as child element is positioned absolutely and requires either a relatively or absolutely positioned parent -->
+		<div class="related sections-list" style="z-index: 10;"><!-- inline style added for demo purposes -->
+			<div class="inner group">
+				<h2>Related section example</h2>
+					<ul>
+					<li><a href="/browse/">This is a related</a></li>
+					<li><a href="/browse/">right-hand side section</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div class="notes">
+		<div>
+			<h2>Hierarchy</h2>
+			<p>div.<span class="h-a">related</span> > div<span class="h-b">.inner</span></p>
+		</div>
+		<div>
+			<h2>Notes</h2>
+			<p>This element relies on being inside a relative or absolutely positioned parent element as.</p>
+		</div>
+	</div>
+			<div class="code">
+				<div>
+					<h2>HTML</h2>
+        	        <code>
+					    &lt;div class="<span class="h-a">related</span> sections-list"&gt;<br />
+					    &lt;div class="<span class="h-b">inner</span> group"&gt;<br />
+					    &lt;h2&gt;Related section example&lt;/h2&gt;<br />
+					    &lt;ul&gt;<br />
+					    &lt;li&gt;&lt;a href="#"&gt;List item&lt;/a&gt;&lt;/li&gt;<br />
+					    &lt;/ul&gt;<br />
+					    &lt;/div&gt;<br />
+					    &lt;/div&gt;
+					</code>
+				</div>
+				<div class="css">
+					<h2>CSS</h2>
+					<code>
+					    <span class="h-a">.related</span> {<br />
+					    position: absolute;<br />
+					    right: 0;<br />
+					    width: 16.5em;<br />
+						}<br />
+					    <span class="h-a">.related</span> <span class="h-b">.inner</span> {<br />
+					    background-color: #F0E7D5;<br />
+					    padding: 0 1em 0.25em 1.5em;<br />
+					    width: auto;<br />
+					    }
+					</code>
+				</div>
+			</div>
+</div>
+
+
+
 
 <div class="ui-element">
 	<h1>div.info-notice div.help-notice </h1>
@@ -481,7 +540,7 @@
 		</div>
 		<div>
 			<h2>Notes</h2>
-			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as div.highlight-answer example above.</p>
+			<p>This element is independant. However there are elements that are visually similar and use almost identical CSS. These elements could share CSS instead of repeating the CSS with different classes.</p>
 		</div>
 	</div>
 			<div class="code">
@@ -532,20 +591,20 @@
 				<div>
 					<h2>HTML</h2>
         	        <code>
-						&lt;div class="subscribe"&gt;<br />
-						&lt;p&gt;Add dates to your calendar: &lt;a href="/bank-holidays/england-and-wales-2013.ics" title="Download these dates so you can add them to a calendar application such as iCal or Outlook"&gt;Bank holidays for 2013 in England and Wales&lt;/a&gt;.&lt;/p&gt;<br />
+						&lt;div class="<span class="h-a">subscribe</span>"&gt;<br />
+						&lt;<span class="h-b">p</span>&gt;Add dates to your calendar: &lt;a href="/bank-holidays/england-and-wales-2013.ics" title="Download these dates so you can add them to a calendar application such as iCal or Outlook"&gt;Bank holidays for 2013 in England and Wales&lt;/a&gt;.&lt;/p&gt;<br />
 						&lt;/div&gt;<br />
 					</code>
 				</div>
 				<div class="css">
 					<h2>CSS</h2>
 					<code>
-						.subscribe {<br />
+						<span class="h-a">.subscribe</span> {<br />
 						border: 1px solid #93A1A1;<br />
 						margin: 1em auto;<br />
 						padding: 0.5em 0.75em;<br />
 						}<br />
-						.subscribe p {<br />
+						<span class="h-a">.subscribe</span> <span class="h-b">p</span> {<br />
 						font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
 						font-size: 0.85em;<br />
 						margin: 0;<br />
@@ -556,102 +615,6 @@
 </div>
 
 
-
-
-<div class="ui-element">
-	<h1>nav.pagination</h1>
-        <nav class="pagination" role="navigation">
-        <ul class="group">
-          <li class="first">
-          <span>You are at the beginning of this guide</span>
-          </li>
-          <li class="next">
-          <a href="/after-a-death/register-the-death" title="Navigate to next part" rel="next"><span class="pagination-label">Part 2</span> <span class="pagination-part-title">Register the death</span></a>
-          </li>
-        </ul>
-        </nav>
-	<div class="notes">
-		<div>
-			<h2>Hierarchy</h2>
-			<p>nav.<span class="h-a">pagination</span> > <span class="h-b">ul</span> > <span class="h-c">li</span> > <span class="h-d">span</span></p>
-		</div>
-		<div>
-			<h2>Notes</h2>
-			<p>This nav.pagination element is independant.</p>
-		</div>
-	</div>
-			<div class="code">
-				<div>
-					<h2>HTML</h2>
-        	        <code>
-				        &lt;nav class="<span class="h-a">pagination</span>" role="navigation"&gt;<br />
-				        &lt;<span class="h-b">ul</span> class="group"&gt;<br />
-				        &lt;<span class="h-c">li</span> class="first"&gt;<br />
-				        &lt;<span class="h-d">span</span>&gt;You are at the beginning of this guide&lt;/span&gt;<br />
-				        &lt;/li&gt;<br />
-				        &lt;<span class="h-c">li</span> class="next"&gt;<br />
-				        &lt;a href="/after-a-death/register-the-death" title="Navigate to next part" rel="next">&lt;<span class="h-d">span</span> class="pagination-label">Part 2&lt;/span&gt; &lt;<span class="h-b">span</span> class="pagination-part-title"&gt;Register the death&lt;/span&gt;&lt;/a&gt;<br />
-				        &lt;/li&gt;<br />
-				        &lt;/ul&gt;<br />
-				        &lt;/nav&gt;<br />
-					</code>
-				</div>
-				<div class="css">
-					<h2>CSS</h2>
-					<code>
-				        <span class="h-a">.pagination</span> {<br />
-				        display: block;<br />
-				        margin: 2em 0 0 0;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> .first <span class="h-d">span</span>, .pagination .last <span class="h-d">span</span> {<br />
-				        display: block;<br />
-				        min-height: 4.5em;<br />
-				        padding: 0.75em 5%;<br />
-				        width: 90%;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> <span class="h-b">ul</span> {<br />
-				        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
-				        margin: 0;<br />
-				        padding: 0;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> <span class="h-c">li</span> {<br />
-				        float: left;<br />
-				        font-size: 1em;<br />
-				        list-style: none;<br />
-				        text-align: right;<br />
-				        margin: 0;<br />
-				        padding: 0;<br />
-				        width: 48.5%;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> <span class="h-c">li</span>:first-child {<br />
-				        margin-right: 3%;<br />
-				        text-align: left;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> .next a {<br />
-				        background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/section-divider-arrow-c5703368e8bcf63f5b20a64b6242f3be.png);<br />
-				        background-position: 95% 50%;<br />
-				        background-repeat: no-repeat;<br />
-				        padding: 0.75em 15% 0.75em 5%;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a {<br />
-				        background-color: #E1E8E8;<br />
-				        display: block;<br />
-				        float: left;<br />
-				        min-height: 4.5em;<br />
-				        text-decoration: none;<br />
-				        width: 80%;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a:hover {<br />
-				        background-color: #97C5E5;<br />
-				        color: #ffffff;<br />
-				        }<br />
-				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a .pagination-part-title {<br />
-						text-decoration: underline;<br />
-						}<br />
-					</code>
-				</div>
-			</div>
-</div>
 
 
 
@@ -795,8 +758,8 @@
 				<div>
 					<h2>HTML</h2>
 				    <code>
-						&lt;article&gt;<br />
-						&lt;table class="calendar"&gt;<br />
+						&lt;<span class="h-a">article</span>&gt;<br />
+						&lt;table class="<span class="h-b">calendar</span>"&gt;<br />
 						&lt;caption&gt;2012 bank holidays in England and Wales&lt;/caption&gt;<br />
 						&lt;thead&gt;&lt;tr&gt;<br />
 						&lt;th scope="col"&gt;Date&lt;/th&gt;<br />
@@ -818,12 +781,12 @@
 				<div class="css">
 					<h2>CSS</h2>
 					<code>
-article table.calendar {<br />
+<span class="h-a">article</span> table<span class="h-b">.calendar</span> {<br />
 background-color: inherit;<br />
 margin: 1em auto 2em;<br />
 width: 100%;<br />
 }<br />
-article table {<br />
+<span class="h-a">article</span> table {<br />
 border-collapse: collapse;<br />
 border-spacing: 0;<br />
 <del>margin: 0 0 1em;</del><br />
@@ -831,26 +794,26 @@ padding: 0;<br />
 <del>width: 100%;</del><br />
 <del>margin-top: 0;</del><br />
 }<br />
-article table caption {<br />
+<span class="h-a">article</span> table caption {<br />
 font-size: 1.25em;<br />
 font-weight: bold;<br />
 margin-bottom: 0.5em;<br />
 }<br />
-article th {<br />
+<span class="h-a">article</span> th {<br />
 text-align: left;<br />
 color: white;<br />
 font-weight: normal;<br />
 background-color: #0A3641;<br />
 border: solid 2px white;<br />
 }<br />
-article td {<br />
+<span class="h-a">article</span> td {<br />
 background: #E1E8E8;<br />
 border: solid 2px white;<br />
 }<br />
-article td {<br />
+<span class="h-a">article</span> td {<br />
 padding: 0.6em 0.5em;<br />
 }<br />
-article th, article td {<br />
+<span class="h-a">article</span> th, <span class="h-a">article</span> td {<br />
 vertical-align: top;<br />
 line-height: 1.3em;<br />
 }<br />
@@ -924,62 +887,100 @@ line-height: 1.3em;<br />
 
 
 
-
 <div class="ui-element">
-	<h1>div.related</h1>
-	<div style="position: relative; height: 150px; border: 1px solid #dedede; margin-bottom: 50px;"><!-- div with inline styles as child element is positioned absolutely and requires either a relatively or absolutely positioned parent -->
-		<div class="related sections-list" style="z-index: 10;"><!-- inline style added for demo purposes -->
-			<div class="inner group">
-				<h2>Related section example</h2>
-					<ul>
-					<li><a href="/browse/">This is a related</a></li>
-					<li><a href="/browse/">right-hand side section</a></li>
-					</ul>
-			</div>
-		</div>
-	</div>
+	<h1>nav.pagination</h1>
+        <nav class="pagination" role="navigation">
+        <ul class="group">
+          <li class="first">
+          <span>You are at the beginning of this guide</span>
+          </li>
+          <li class="next">
+          <a href="/after-a-death/register-the-death" title="Navigate to next part" rel="next"><span class="pagination-label">Part 2</span> <span class="pagination-part-title">Register the death</span></a>
+          </li>
+        </ul>
+        </nav>
 	<div class="notes">
 		<div>
 			<h2>Hierarchy</h2>
-			<p>div.<span class="h-a">related</span> > div<span class="h-b">.inner</span></p>
+			<p>nav.<span class="h-a">pagination</span> > <span class="h-b">ul</span> > <span class="h-c">li</span> > <span class="h-d">span</span></p>
 		</div>
 		<div>
 			<h2>Notes</h2>
-			<p>This element and similar others are independant and although they don't, could easily share styles with similar highlights. For some reason this div isn't working in this demo. But should be the same as div.highlight-answer example above.</p>
+			<p>This nav.pagination element is independant.</p>
 		</div>
 	</div>
 			<div class="code">
 				<div>
 					<h2>HTML</h2>
         	        <code>
-					    &lt;div class="<span class="h-a">related</span> sections-list"&gt;<br />
-					    &lt;div class="<span class="h-b">inner</span> group"&gt;<br />
-					    &lt;h2&gt;Related section example&lt;/h2&gt;<br />
-					    &lt;ul&gt;<br />
-					    &lt;li&gt;&lt;a href="#"&gt;List item&lt;/a&gt;&lt;/li&gt;<br />
-					    &lt;/ul&gt;<br />
-					    &lt;/div&gt;<br />
-					    &lt;/div&gt;
+				        &lt;nav class="<span class="h-a">pagination</span>" role="navigation"&gt;<br />
+				        &lt;<span class="h-b">ul</span> class="group"&gt;<br />
+				        &lt;<span class="h-c">li</span> class="first"&gt;<br />
+				        &lt;<span class="h-d">span</span>&gt;You are at the beginning of this guide&lt;/span&gt;<br />
+				        &lt;/li&gt;<br />
+				        &lt;<span class="h-c">li</span> class="next"&gt;<br />
+				        &lt;a href="/after-a-death/register-the-death" title="Navigate to next part" rel="next">&lt;<span class="h-d">span</span> class="pagination-label">Part 2&lt;/span&gt; &lt;<span class="h-b">span</span> class="pagination-part-title"&gt;Register the death&lt;/span&gt;&lt;/a&gt;<br />
+				        &lt;/li&gt;<br />
+				        &lt;/ul&gt;<br />
+				        &lt;/nav&gt;<br />
 					</code>
 				</div>
 				<div class="css">
 					<h2>CSS</h2>
 					<code>
-					    <span class="h-a">.related</span> {<br />
-					    position: absolute;<br />
-					    right: 0;<br />
-					    width: 16.5em;<br />
+				        <span class="h-a">.pagination</span> {<br />
+				        display: block;<br />
+				        margin: 2em 0 0 0;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> .first <span class="h-d">span</span>, .pagination .last <span class="h-d">span</span> {<br />
+				        display: block;<br />
+				        min-height: 4.5em;<br />
+				        padding: 0.75em 5%;<br />
+				        width: 90%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-b">ul</span> {<br />
+				        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;<br />
+				        margin: 0;<br />
+				        padding: 0;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> {<br />
+				        float: left;<br />
+				        font-size: 1em;<br />
+				        list-style: none;<br />
+				        text-align: right;<br />
+				        margin: 0;<br />
+				        padding: 0;<br />
+				        width: 48.5%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span>:first-child {<br />
+				        margin-right: 3%;<br />
+				        text-align: left;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> .next a {<br />
+				        background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/section-divider-arrow-c5703368e8bcf63f5b20a64b6242f3be.png);<br />
+				        background-position: 95% 50%;<br />
+				        background-repeat: no-repeat;<br />
+				        padding: 0.75em 15% 0.75em 5%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a {<br />
+				        background-color: #E1E8E8;<br />
+				        display: block;<br />
+				        float: left;<br />
+				        min-height: 4.5em;<br />
+				        text-decoration: none;<br />
+				        width: 80%;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a:hover {<br />
+				        background-color: #97C5E5;<br />
+				        color: #ffffff;<br />
+				        }<br />
+				        <span class="h-a">.pagination</span> <span class="h-c">li</span> a .pagination-part-title {<br />
+						text-decoration: underline;<br />
 						}<br />
-					    <span class="h-a">.related</span> <span class="h-b">.inner</span> {<br />
-					    background-color: #F0E7D5;<br />
-					    padding: 0 1em 0.25em 1.5em;<br />
-					    width: auto;<br />
-					    }
 					</code>
 				</div>
 			</div>
 </div>
-
 
 
 
