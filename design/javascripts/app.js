@@ -1,25 +1,28 @@
 
 jQuery(document).ready(function ($) {
+
+	appendRGBVals();
 	
-	// Append RGB value after Hex value
-	
+});
+
+
+function appendRGBVals() {
 	$("ul.palette li").each(function () {
   		var rgb = $(this).css("background-color");
   		$(this).append("<p>" + rgb + "</p>");
 	});
-		
-});
-
+}
 
 function activateClickToCopy() {
 	
 	// CLICK TO COPY HEX VALUE TO CLIPBOARD (REQUIRES FLASH 10 AND UP)
 	
-	// Use zclip to add SWFs to each palette li for the copying feature
+	// Uses jquery.zclip.min.js to add SWFs to each palette li for the copying feature
 	// This function is called from ../javascripts/flash.block.detect.swf
 	// so we only get clipboard copy when people have flash version 10 and up and its not blocked
 	
 	$('li').each(function(index) {	    	
+    	
     	$(this).zclip({
         path:'../javascripts/ZeroClipboard.swf',
         copy:$(this).children().filter("p:first").text(),
@@ -38,6 +41,10 @@ function activateClickToCopy() {
 	});
 	
 	// reveal the clipboard instruction/feedback notice
-	$(".clipboard").show();
+	$(".clipboard").text("Click a colour to copy its hex value to your clipboard.");
+	removeFlashBlockTest();
 }
 
+function removeFlashBlockTest() {
+	 $("#check_for_flash_blocker").remove();
+}
