@@ -62,18 +62,20 @@
 
 
 
-
 /* BRAND FONT: GILL SANS */
 
-.brand-45 p {
-    font-family:
-        "Gill Sans W01 Book", 
-        "Gill Sans MT", 
-        "Gill Sans", 
-        "Helvetica Neue", 
-        Arial, 
-        Helvetica, 
-        sans-serif;
+@font-brand:
+    "Gill Sans W01 Book", 
+    "Gill Sans MT", 
+    "Gill Sans", 
+    "Helvetica Neue", 
+    Arial, 
+    Helvetica, 
+    sans-serif;
+
+
+.brand-45 {
+    font-family: @font-brand;
     font-size: 45px;
     font-size: 4.5rem;
     line-height: 1.1555555556; /*52px*/
@@ -86,15 +88,8 @@
     padding-bottom: 0.5rem;
 }
 
-.brand-32 p {
-    font-family:
-        "Gill Sans W01 Book", 
-        "Gill Sans MT", 
-        "Gill Sans", 
-        "Helvetica Neue", 
-        Arial, 
-        Helvetica, 
-        sans-serif;
+.brand-32 {
+    font-family: @font-brand;
     font-size: 32px;
     font-size: 3.2rem;
     line-height: 1.25; /*40px*/
@@ -107,15 +102,8 @@
     padding-bottom: 0.7rem;
 }
 
-.brand-18 p {
-    font-family:
-        "Gill Sans W01 Book", 
-        "Gill Sans MT", 
-        "Gill Sans", 
-        "Helvetica Neue", 
-        Arial, 
-        Helvetica, 
-        sans-serif;
+.brand-18 {
+    font-family: @font-brand;
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 1.3333333333; /*24px*/
@@ -128,15 +116,8 @@
     padding-bottom: 1.1rem;
 }
 
-.brand-13 p {
-    font-family:
-        "Gill Sans W01 Book", 
-        "Gill Sans MT", 
-        "Gill Sans", 
-        "Helvetica Neue", 
-        Arial, 
-        Helvetica, 
-        sans-serif;
+.brand-13 {
+    font-family: @font-brand;
     font-size: 13px;
     font-size: 1.3rem;
     line-height: 1.2307692308; /*16px*/
@@ -159,13 +140,16 @@
 
 /* SANS: HELVETICA */
 
-.sans-18 p {
-    font-family:
-        "Helvetica Neue", 
-        "HelveticaNeue",
-        Arial, 
-        Helvetica, 
-        sans-serif;
+@font-sans:
+    "Helvetica Neue", 
+    "HelveticaNeue",
+    Arial, 
+    Helvetica, 
+    sans-serif;
+
+
+.sans-18 {
+    font-family: @font-sans;
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 1.3333333333; /*24px*/
@@ -177,13 +161,8 @@
     padding-bottom: 1.2rem;
 }
 
-.sans-15 p {
-    font-family:
-        "Helvetica Neue", 
-        "HelveticaNeue",
-        Arial, 
-        Helvetica, 
-        sans-serif;
+.sans-15 {
+    font-family: @font-sans;
     font-size: 15px;
     font-size: 1.5rem;
     line-height: 1.6; /*24px*/
@@ -193,6 +172,19 @@
     padding-top: 0.6rem;
     padding-bottom: 10px;
     padding-bottom: 1rem;
+}
+
+.sans-12 { /* labels only */
+    font-family: @font-sans;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1.3333333333; /*16px*/
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    padding-top: 3px;
+    padding-top: 0.3rem;
+    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
 }
 
 
@@ -205,10 +197,13 @@
 
 /* BODY: GEORGIA */
 
-.body-16 p {
-    font-family:
-        Georgia, 
-        serif;
+@font-body:
+    Georgia, 
+    serif;
+
+
+.body-16 {
+    font-family: @font-body;
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 1.5; /*24px*/
