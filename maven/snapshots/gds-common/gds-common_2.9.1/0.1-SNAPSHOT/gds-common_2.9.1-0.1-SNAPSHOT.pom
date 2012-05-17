@@ -18,4 +18,42 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>GDSmavenreposnapshots</id>
+            <name>GDS maven repo snapshots</name>
+            <url>http://alphagov.github.com/maven/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>GDSmavenreporeleases</id>
+            <name>GDS maven repo releases</name>
+            <url>http://alphagov.github.com/maven/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>JavanetMaven2Repository</id>
+            <name>Java.net Maven2 Repository</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>reponovussnaps</id>
+            <name>repo.novus snaps</name>
+            <url>http://repo.novus.com/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>repocodahale</id>
+            <name>repo.codahale</name>
+            <url>http://repo.codahale.com/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>SonatypeOSSSnapshots</id>
+            <name>Sonatype OSS Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 </project>
