@@ -18,6 +18,12 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>play</groupId>
+            <artifactId>play_2.9.1</artifactId>
+            <version>2.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>com.mongodb.casbah</groupId>
             <artifactId>casbah_2.9.1</artifactId>
             <version>2.1.5-1</version>
@@ -63,12 +69,6 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.1.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>play</groupId>
-            <artifactId>play_2.9.1</artifactId>
-            <version>2.0.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
