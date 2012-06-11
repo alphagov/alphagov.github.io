@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>uk.gov.gds</groupId>
-            <artifactId>places-model_2.9.1</artifactId>
+            <artifactId>places-api-client_2.9.1</artifactId>
             <version>0.1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
