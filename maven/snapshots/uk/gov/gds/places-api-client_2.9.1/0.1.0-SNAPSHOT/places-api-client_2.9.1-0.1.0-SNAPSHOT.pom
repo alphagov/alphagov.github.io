@@ -26,6 +26,12 @@
     </dependencies>
     <repositories>
         <repository>
+            <id>Typesafereleases</id>
+            <name>Typesafe releases</name>
+            <url>http://repo.typesafe.com/typesafe/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
             <id>GDSmavenreposnapshots</id>
             <name>GDS maven repo snapshots</name>
             <url>http://alphagov.github.com/maven/snapshots/</url>
@@ -53,6 +59,18 @@
             <id>repocodahale</id>
             <name>repo.codahale</name>
             <url>http://repo.codahale.com/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>SonatypeOSSSnapshots</id>
+            <name>Sonatype OSS Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>reposcalatoolsreleases</id>
+            <name>repo scalatools releases</name>
+            <url>https://oss.sonatype.org/content/groups/scala-tools/</url>
             <layout>default</layout>
         </repository>
     </repositories>
