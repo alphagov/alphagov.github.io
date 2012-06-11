@@ -1,16 +1,28 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>places-universe</groupId>
-    <artifactId>places-universe_2.9.1</artifactId>
+    <groupId>uk.gov.gds</groupId>
+    <artifactId>places-integration-tests_2.9.1</artifactId>
     <packaging>pom</packaging>
-    <description>places-universe</description>
-    <version>0.1-SNAPSHOT</version>
-    <name>places-universe</name>
+    <description>places-integration-tests</description>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>places-integration-tests</name>
     <organization>
-        <name>places-universe</name>
+        <name>uk.gov.gds</name>
     </organization>
     <dependencies>
+        <dependency>
+            <groupId>places-api</groupId>
+            <artifactId>places-api_2.9.1</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>uk.gov.gds</groupId>
+            <artifactId>places-api-client_2.9.1</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
@@ -47,12 +59,6 @@
             <id>repocodahale</id>
             <name>repo.codahale</name>
             <url>http://repo.codahale.com/</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>SonatypeOSSSnapshots</id>
-            <name>Sonatype OSS Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
             <layout>default</layout>
         </repository>
     </repositories>
