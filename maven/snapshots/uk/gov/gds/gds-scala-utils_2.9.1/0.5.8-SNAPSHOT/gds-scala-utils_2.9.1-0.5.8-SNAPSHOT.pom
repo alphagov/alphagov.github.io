@@ -74,6 +74,12 @@
     </dependencies>
     <repositories>
         <repository>
+            <id>Typesafereleases</id>
+            <name>Typesafe releases</name>
+            <url>http://repo.typesafe.com/typesafe/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
             <id>GDSmavenreposnapshots</id>
             <name>GDS maven repo snapshots</name>
             <url>http://alphagov.github.com/maven/snapshots/</url>
