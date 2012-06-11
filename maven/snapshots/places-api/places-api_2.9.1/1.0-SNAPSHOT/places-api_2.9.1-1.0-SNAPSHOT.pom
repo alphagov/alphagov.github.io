@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>places-api</groupId>
+    <artifactId>places-api_2.9.1</artifactId>
+    <packaging>pom</packaging>
+    <description>places-api</description>
+    <version>1.0-SNAPSHOT</version>
+    <name>places-api</name>
+    <organization>
+        <name>places-api</name>
+    </organization>
+    <dependencies>
+        <dependency>
+            <groupId>uk.gov.gds</groupId>
+            <artifactId>places-api-client_2.9.1</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.9.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>play</groupId>
+            <artifactId>play_2.9.1</artifactId>
+            <version>2.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>play</groupId>
+            <artifactId>play-test_2.9.1</artifactId>
+            <version>2.0.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>TypesafeReleasesRepository</id>
+            <name>Typesafe Releases Repository</name>
+            <url>http://repo.typesafe.com/typesafe/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>TypesafeSnapshotsRepository</id>
+            <name>Typesafe Snapshots Repository</name>
+            <url>http://repo.typesafe.com/typesafe/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>GDSmavenreposnapshots</id>
+            <name>GDS maven repo snapshots</name>
+            <url>http://alphagov.github.com/maven/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>GDSmavenreporeleases</id>
+            <name>GDS maven repo releases</name>
+            <url>http://alphagov.github.com/maven/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>JavanetMaven2Repository</id>
+            <name>Java.net Maven2 Repository</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>reponovussnaps</id>
+            <name>repo.novus snaps</name>
+            <url>http://repo.novus.com/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>repocodahale</id>
+            <name>repo.codahale</name>
+            <url>http://repo.codahale.com/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
