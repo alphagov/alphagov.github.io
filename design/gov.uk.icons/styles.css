@@ -1,0 +1,87 @@
+/* Contact sheet
+----------------
+Based on this one: http://www.brunildo.org/test/img_center.html
+But converted to HTML5 elements
+
+*/
+
+.contact-sheet li {
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin: 0 1em 1em 0;
+	border: 1px solid #e8f0f0;
+	padding: 0;
+}
+
+.contact-sheet li>figure {
+	display: table;
+	width: 9em;
+}
+
+.contact-sheet figure{
+	margin: 0;
+}
+
+.contact-sheet a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	background-color: #FFF;
+	cursor: pointer;
+}
+
+.contact-sheet>li .image-container {
+	display: table-cell;
+	vertical-align: middle;
+	width: 10em;
+	height: 10em;
+}
+
+.contact-sheet img {
+	vertical-align: middle;
+}
+.contact-sheet a:hover {
+	background-color: #d5e8f3;
+}
+
+.contact-sheet figcaption {
+	display: block;
+	background: #e8f0f0;
+	padding: .5em;
+}
+
+/* IE 7 and below styles */
+.lt-ie8 .contact-sheet li {
+	width: 201px;
+	w\idth: 199px;
+	display: inline;
+}
+.lt-ie8 .contact-sheet {
+	_height: 0;
+	zoom: 1;
+	display: inline;
+}
+.lt-ie8 .contact-sheet li .image-container {
+	display: block;
+	width: auto;
+	height: auto;
+}
+.lt-ie8 .contact-sheet .image-container span {
+	vertical-align: middle;
+	height: 199px;
+	zoom: 1;
+}
+
+/* IE 6 and below styles */
+.lt-ie7 html .contact-sheet li .image-container {
+	display: block;
+	font-size: 1px;
+}
+.lt-ie7 html .contact-sheet .image-container span {
+	display: inline-block;
+	vertical-align: middle;
+	height: 199px;
+	width: 1px;
+}
