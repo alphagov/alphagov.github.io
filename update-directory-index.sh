@@ -3,13 +3,13 @@
 function generate_directory_index {
   echo -e "Creating directory listing index.html for "$1
   (
-    echo -e "<html>\n<body>\n<h1 class=\"gds-autogen\">Directory listing</h1>\n<hr/>\n<pre>"
-    ls -1pa "${1}" |\
-      grep -v "^\./$" |\
-      grep -v "^\..*/$" |\
-      grep -v "^index\.html$"|\
-      awk '{ printf "<a href=\"%s\">%s</a>\n",$1,$1 }'
-    echo -e "</pre>\n</body>\n</html>"
+    echo -e "<html>\n<body>\n<h1 class=\"gds-autogen\">Directory listing</h1>\n<hr/>\n<code><table>"
+    ls -1pal "${1}" |\
+      grep -v "^.*\./$" |\
+      grep -v "^.*\.\./$" |\
+      grep -v "^.*index\.html$"|\
+      awk '{ printf "<tr><td><a href=\"%s\">%s</a></td><td>%s %s %s</td></tr>\n",$9,$9, $6,$7,$8 }'
+    echo -e "</table>\n</body>\n</html>"
   ) > "${1}/index.html"
 }
  
