@@ -48,9 +48,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.novus</groupId>
-            <artifactId>salat-core_2.9.1</artifactId>
-            <version>0.0.8</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.6</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

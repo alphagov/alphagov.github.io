@@ -61,7 +61,7 @@
         </dependency>
         <dependency>
             <groupId>com.novus</groupId>
-            <artifactId>salat_2.9.1</artifactId>
+            <artifactId>salat-core_2.9.1</artifactId>
             <version>0.0.8</version>
             <scope>compile</scope>
         </dependency>
