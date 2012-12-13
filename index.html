@@ -3,7 +3,7 @@
 <!--<![endif]-->
 <html>
   <head>
-    <title>GDS Code on Github</title>
+    <title>GDS Digital Leaders Network</title>
     <style type="text/css">
     /*main.css*/
 
@@ -495,59 +495,62 @@ body {
         </hgroup>
       </header>
       <article>
-        <p>The UK Government Digital Service has a practice of <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>. That means a lot of public repositories end up in our github account. Those repositories can be hard to navigate so we're assembling a guide to it here, identifying the pieces we think are likely to be useful to others and then the projects that other code is focussed on.</p>
+      	<p>The UK Government Digital Service has a practice of <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>. That means a lot of public repositories end up in our github account. Those repositories can be hard to navigate so we're assembling a guide to it here, identifying the pieces we think are likely to be useful to others and then the projects that other code is focussed on.</p>
       </article>
       <article>
 				<h2>Libraries and Utilities</h2>
 
-		<ul>
-			<li>
-				<h3>
-					<a href="https://github.com/alphagov/unicornherder">Unicorn Herder</a> (python)
-				</h3>
-				<p>Unicorn Herder is a utility designed to assist in the use of Upstart and similar supervisors with Unicorn. It does this by polling the pidfile written by the Unicorn master process, and automating the sequence of signals that must be sent to the master to do a "hot-reload". If Unicorn quits, so will the Unicorn Herder, meaning that if you supervise the herder (which does not daemonize), you are effectively supervising the Unicorn process.</p>
-			</li>
-			<li>
-				<h3>
-					<a href="https://github.com/alphagov/fake_google_analytics">Fake Google Analytics</a> (ruby)
-				</h3>
-				<p>Fake Google Analytics (GA) is a tool used to shorten the feedback loop when testing the interaction of a website with Google Analytics. It does so by redirecting all traffic to www.google-analytics.com to the web server run locally, storing it in the file, and exposing via simple HTTP interface. (an entry in /etc/hosts is added)</p>
-			</li>
-			<li>
-				<h3>
-					<a href="https://github.com/alphagov/character_encoding_cleaner">Character Encoding Cleaner</a> (ruby)
-				</h3>
-				<p>This script is for fixing illegal encodings in text files. It's designed to clean up corrupt character sequences in UTF-8 files. The most common cause of such corruption is opening a UTF-8 encoded file as though it were ISO-8859-1, and then saving it as UTF-8.</p>
-			</li>
-			<li>
-				<h3><a href="https://github.com/alphagov/google-auth-bridge">Google Auth Bridge</a></h3>
-				<p>Google allow you to authenticate with their APIs with OAuth. That process can be a little tedious if you have to do it over and over. Google Authentication Bridge allows you to authenticate with Google and will store the refresh token in a file for subsequent use.</p>
-			</li>
-			<li>
-				<h3><a href="https://github.com/alphagov/magna-charta">Magna Charta</a> (javascript)</h3>
-				<p>A javascript library (currently a jQuery plugin) for producing bar charts from tables.</p>
-			</li>
-			<li>
-				<h3><a href="https://github.com/alphagov/passphrase_entropy">PassphraseEntropy</a> (ruby)</h3>
-				<p>Estimate the entropy of a passphrase. This is calculated as the number of bytes required to encode the passphrase on top of a Deflate stream of a preset dictionary.</p>
-				<p>Inspired by <a href="http://xkcd.com/936/">xkcd 936</a>.</p>
-			</li>
-			<li>
-				<h3><a href="https://github.com/alphagov/rack-geo">Rack::Geo</a> (ruby)</h3>
-				<p>Simple Rack middleware which processes incoming requests and adds, updates, and passes through as a Header, Geo-location information</p>
-			</li>
-			<li><h3><a href="https://github.com/alphagov/sbv-to-ttaf">SBV to TTAF</a> (ruby)</h3>
-				<p>Convert SBV caption files to the Timed Text Authoring Format XML schema used by the Nomensa accessible video player.</p></li>
-		</ul>
+				<ul>
+					<li>
+						<h3>
+							<a href="https://github.com/alphagov/unicornherder">Unicorn Herder</a> (python)
+						</h3>
+						<p>Unicorn Herder is a utility designed to assist in the use of Upstart and similar supervisors with Unicorn. It does this by polling the pidfile written by the Unicorn master process, and automating the sequence of signals that must be sent to the master to do a "hot-reload". If Unicorn quits, so will the Unicorn Herder, meaning that if you supervise the herder (which does not daemonize), you are effectively supervising the Unicorn process.</p>
+					</li>
+					<li>
+						<h3>
+							<a href="https://github.com/alphagov/fake_google_analytics">Fake Google Analytics</a> (ruby)
+						</h3>
+						<p>Fake Google Analytics (GA) is a tool used to shorten the feedback loop when testing the interaction of a website with Google Analytics. It does so by redirecting all traffic to www.google-analytics.com to the web server run locally, storing it in the file, and exposing via simple HTTP interface. (an entry in /etc/hosts is added)</p>
+					</li>
+					<li>
+						<h3>
+							<a href="https://github.com/alphagov/character_encoding_cleaner">Character Encoding Cleaner</a> (ruby)
+						</h3>
+						<p>This script is for fixing illegal encodings in text files. It's designed to clean up corrupt character sequences in UTF-8 files. The most common cause of such corruption is opening a UTF-8 encoded file as though it were ISO-8859-1, and then saving it as UTF-8.</p>
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/google-auth-bridge">Google Auth Bridge</a></h3>
+						<p>Google allow you to authenticate with their APIs with OAuth. That process can be a little tedious if you have to do it over and over. Google Authentication Bridge allows you to authenticate with Google and will store the refresh token in a file for subsequent use.</p>
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/magna-charta">Magna Charta</a> (javascript)</h3>
+						<p>A javascript library (currently a jQuery plugin) for producing bar charts from tables.</p>
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/passphrase_entropy">PassphraseEntropy</a> (ruby)</h3>
+						<p>Estimate the entropy of a passphrase. This is calculated as the number of bytes required to encode the passphrase on top of a Deflate stream of a preset dictionary.</p>
+						<p>Inspired by <a href="http://xkcd.com/936/">xkcd 936</a>.</p>
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/rack-geo">Rack::Geo</a> (ruby)</h3>
+						<p>Simple Rack middleware which processes incoming requests and adds, updates, and passes through as a Header, Geo-location information</p>
+					</li>
+					<li><h3><a href="https://github.com/alphagov/sbv-to-ttaf">SBV to TTAF</a> (ruby)</h3>
+						<p>Convert SBV caption files to the Timed Text Authoring Format XML schema used by the Nomensa accessible video player.</p></li>
+				</ul>
+			</article>
+			<article>
+				<h2>A little background</h2>
 
-		<h2>A little background</h2>
+				<h3>Who is this code by?</h3>
 
-		<h3>Who is this code by?</h3>
+				<p>This is the github account of the Government Digital Service, a unit of the UK government's Cabinet Office tasked with delivering digital by default. For more on GDS and the UK government's digital strategy <a href="http://digital.cabinet-office.gov.uk">see the GDS blog</a>.</p>
 
-		<p>This is the github account of the Government Digital Service, a unit of the UK government's Cabinet Office tasked with delivering digital by default. For more on GDS and the UK government's digital strategy <a href="http://digital.cabinet-office.gov.uk">see the GDS blog</a>.</p>
+				<h3>Why alphagov?</h3>
 
-		<h3>Why alphagov?</h3>
-
-		<p><a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated that the GOV.UK project (and the Government Digital Service with it) could work. It was launched in May 2011 and remained live until the beta of GOV.UK launched at the end of January 2012. This github account was set up for that project and then developed to be the main account for the Government Digital Service.</p>
+				<p><a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated that the GOV.UK project (and the Government Digital Service with it) could work. It was launched in May 2011 and remained live until the beta of GOV.UK launched at the end of January 2012. This github account was set up for that project and then developed to be the main account for the Government Digital Service.</p>
+			</article>
+		</div>
 	</body>
 </html>
