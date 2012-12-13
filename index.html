@@ -1,17 +1,553 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
+<!--<![endif]-->
 <html>
-<body>
-<h1 class="gds-autogen">Directory listing</h1>
-<hr/>
-<code><table>
-<tr><td><a href=""></a></td><td>  </td></tr>
-<tr><td><a href=".git/">.git/</a></td><td>10 Dec 11:30</td></tr>
-<tr><td><a href=".gitignore">.gitignore</a></td><td>13 Sep 11:50</td></tr>
-<tr><td><a href="README">README</a></td><td>13 Sep 11:50</td></tr>
-<tr><td><a href="design/">design/</a></td><td>13 Sep 11:50</td></tr>
-<tr><td><a href="development-utils/">development-utils/</a></td><td>10 Dec 11:28</td></tr>
-<tr><td><a href="devutil/">devutil/</a></td><td>10 Dec 11:28</td></tr>
-<tr><td><a href="maven/">maven/</a></td><td>10 Dec 11:28</td></tr>
-<tr><td><a href="update-directory-index.sh">update-directory-index.sh</a></td><td>13 Sep 11:50</td></tr>
-</table>
-</body>
+  <head>
+    <title>GDS Code on Github</title>
+    <style type="text/css">
+    /*main.css*/
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1100px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1300px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1500px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+body {
+  margin-top: 0;
+}
+
+#wrapper {
+  color: #000;
+  background: #fff;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.4444444444;
+  font-weight: 300;
+  padding: 0 104px 13px 104px;
+  padding: 0 10.4rem 1.3rem 10.4rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  #wrapper {
+    padding: 0 26px 13px;
+    padding: 0 2.6rem 1.3rem;
+  }
+}
+
+#wrapper * {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+#wrapper header,
+#wrapper article {
+  clear: both;
+  margin: 0 auto;
+  max-width: 700px;
+  max-width: 70rem;
+  position: relative;
+}
+
+#wrapper article {
+  padding-top: 36px;
+  padding-top: 3.6rem;
+}
+
+#wrapper header nav {
+  padding: 13px 0 25px 0;
+  padding: 1.3rem 0 2.6rem 0;
+}
+
+#wrapper header hgroup {
+  background-color: #000;
+  margin: 0 -75px 0 -75px;
+  margin: 0 -7.5rem 0 -7.5rem;
+}
+
+@media (max-width: 640px) {
+  #wrapper header hgroup {
+    margin: 0 -25px;
+    margin: 0 -2.5rem;
+  }
+}
+
+.lte-ie8 #wrapper header hgroup {
+  margin: 0;
+}
+
+#wrapper header h1 {
+  background-color: #000;
+  color: #fff;
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 1.1555555556;
+  font-weight: 300;
+  overflow: auto;
+  padding: 13px 50px 13px 75px;
+  padding: 1.3rem 2.5rem 1.3rem 7.5rem;
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  #wrapper header h1 {
+    font-size: 26px;
+    font-size: 2.6rem;
+    padding: 8px 25px 8px 35px;
+    padding: 0.8rem 2.5rem 0.8rem 3.5rem;
+  }
+}
+
+.lte-ie8 #wrapper header h1 {
+  padding: 8px 25px;
+}
+
+#wrapper header h1 strong {
+  float: right;
+}
+
+@media (max-width: 640px) {
+  #wrapper header h1 strong {
+    float: none;
+  }
+}
+
+#wrapper header h2 {
+  color: #fff;
+  margin: 0;
+  padding: 8px 50px 17px 75px;
+  padding: 0.8em 5rem 1.7rem 7.5rem;
+}
+
+@media (max-width: 640px) {
+  #wrapper header h2 {
+    padding: 8px 25px 17px 35px;
+    padding: 0.8rem 2.5rem 1.7rem 3.5rem;
+  }
+}
+
+.lte-ie8 #wrapper header h2 {
+  padding: 8px 25px;
+}
+
+#wrapper header h3 {
+  background-color: #D43783;
+  color: #fff;
+  font-family: "Gill Sans W01 Medium", "Gill Sans MT Pro", "Gill Sans", GillSans, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  padding: 8px 13px;
+  padding: 0.8rem 1.3rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  right: 75px;
+  right: -7.5rem;
+}
+
+@media (max-width: 640px) {
+  #wrapper header h3 {
+    right: 25px;
+    right: -2.5rem;
+  }
+}
+
+.lte-ie8 #wrapper header h3 {
+  right: 0px;
+}
+
+#wrapper blockquote {
+  padding: 10px 5%;
+  margin-bottom: 20px;
+}
+
+#wrapper a {
+  border-bottom: 1px solid #2E8ACA;
+  color: #2E8ACA;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#wrapper a:hover,
+#wrapper a:focus {
+  border-color: #ddd;
+}
+
+#wrapper a:active {
+  color: #2E8ACA;
+}
+
+#wrapper strong {
+  font-weight: 500;
+}
+
+.lte-ie8 #wrapper strong {
+  font-weight: 600;
+}
+
+#wrapper img {
+  max-width: 100%;
+}
+
+#wrapper table {
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 17px;
+  margin: 1.7rem 0;
+}
+
+#wrapper table thead {
+  vertical-align: bottom;
+}
+
+#wrapper table th {
+  background-color: #eee;
+}
+
+#wrapper table th,
+#wrapper table td {
+  padding: 10px 7.5px;
+  padding: 1rem 0.75rem;
+}
+
+#wrapper table tbody {
+  vertical-align: top;
+}
+
+#wrapper table td {
+  border: solid 2px #eee;
+  border-left: none;
+  border-right: none;
+}
+
+#wrapper header h1 strong,
+#wrapper header h2,
+#wrapper article h1 {
+  display: block;
+  font-family: "Gill Sans W01 Medium", "Gill Sans MT Pro", "Gill Sans", GillSans, sans-serif;
+  font-size: 23px;
+  font-size: 2.3rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  #wrapper article {
+    padding-left: 1rem;
+  }
+}
+
+#wrapper article h1 {
+  padding: 18px 0 8px;
+  padding: 1.8rem 0 0.8rem;
+}
+
+#wrapper article h2 {
+  line-height: 1.3;
+  font-weight: 500;
+  padding: 13px 0;
+  padding: 1.3rem 0;
+}
+
+#wrapper article h1 + h2,
+#wrapper article h1 + ol,
+#wrapper article h1 + ul {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#wrapper article h4 {
+  float: left;
+  margin-left: -75px;
+  margin-left: -7.5rem;
+  text-align: right;
+  width: 45px;
+  width: 4.5rem;
+}
+
+@media (max-width: 640px) {
+  #wrapper article h4 {
+    margin-left: 35px;
+    margin-left: -3.5rem;
+    width: 25px;
+    width: 2.5rem;
+  }
+}
+
+.lte-ie8 #wrapper h4 {
+  _display: inline;
+}
+
+#wrapper article p,
+#wrapper article ol,
+#wrapper article ul {
+  margin-bottom: 13px;
+  margin-bottom: 1.3rem;
+}
+
+.lte-ie8 #wrapper article li {
+  margin-left: 20px;
+}
+
+#wrapper article li > ul,
+#wrapper article li > ol {
+  margin-top: 0;
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+
+#wrapper article section {
+  position: relative;
+  padding-top: 36px;
+  padding-top: 3.6rem;
+}
+
+/* index and agenda specific */
+
+#wrapper.index header h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+  padding-top: 18px;
+  padding-top: 1.8rem;
+}
+
+#wrapper.index article ol li,
+#wrapper.agenda article ol li {
+  margin-bottom: 13px;
+  margin-bottom: 1.3rem;
+}
+
+.lte-ie8 #wrapper.agenda article ol li {
+  margin-left: 45px;
+}
+
+#wrapper.index article ol li {
+  list-style-type: none;
+}
+
+.lte-ie8 #wrapper.index article ol li {
+  margin-left: 0;
+}
+
+/* colours */
+
+#wrapper.purple header hgroup {
+  background-color: #2e358b;
+}
+#wrapper.purple article h1,
+#wrapper a.purple {
+  border-bottom-color: #2e358b;
+  color: #2e358b;
+}
+#wrapper.babypink header hgroup {
+  background-color: #f499be;
+}
+#wrapper.babypink article h1,
+#wrapper a.babypink {
+  border-bottom-color: #f499be;
+  color: #f499be;
+}
+
+#wrapper.green header hgroup {
+  background-color: #00652E;
+}
+#wrapper.green article h1,
+#wrapper a.green {
+  border-bottom-color: #00652E;
+  color: #00652E;
+}
+#wrapper.fuschia header hgroup {
+  background-color: #912b88;
+}
+#wrapper.fuschia article h1,
+#wrapper a.fuschia {
+  border-bottom-color: #912b88;
+  color: #912b88;
+}
+#wrapper.mauve header hgroup {
+  background-color: #6f72af;
+}
+#wrapper.mauve article h1,
+#wrapper a.mauve {
+  border-bottom-color: #6f72af;
+  color: #6f72af;
+}
+#wrapper.pink header hgroup {
+  background-color: #d53880;
+}
+#wrapper.pink article h1,
+#wrapper a.pink {
+  border-bottom-color: #d53880;
+  color: #d53880;
+}
+#wrapper.mellow-red header hgroup {
+  background-color: #df3034;
+}
+#wrapper.mellow-red article h1,
+#wrapper a.mellow-red {
+  border-bottom-color: #df3034;
+  color: #df3034;
+}
+#wrapper.red header hgroup {
+  background-color: #b10e1e;
+}
+#wrapper.red article h1,
+#wrapper a.red {
+  border-bottom-color: #b10e1e;
+  color: #b10e1e;
+}
+#wrapper.orange header hgroup {
+  background-color: #f47738;
+}
+#wrapper.orange article h1,
+#wrapper a.orange {
+  border-bottom-color: #f47738;
+  color: #f47738;
+}
+#wrapper.blue header hgroup {
+  background-color: #2E3191;
+}
+#wrapper.blue article h1,
+#wrapper a.blue {
+  border-bottom-color: #2E3191;
+  color: #2E3191;
+}
+#wrapper.brown header hgroup {
+  background-color: #b58840;
+}
+#wrapper.brown article h1,
+#wrapper a.brown {
+  border-bottom-color: #b58840;
+  color: #b58840;
+}
+#wrapper.yellow header hgroup {
+  background-color: #ffbf47;
+}
+#wrapper.yellow article h1,
+#wrapper a.yellow {
+  border-bottom-color: #ffbf47;
+  color: #ffbf47;
+}
+
+#wrapper.turquoise header hgroup {
+  background-color: #28a197;
+}
+#wrapper.turquoise article h1,
+#wrapper a.turquoise {
+  border-bottom-color: #28a197;
+  color: #28a197;
+}
+</style>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wrapper" class="index"> 
+      <header>
+        <hgroup>
+          <h1>Government Digital Service</h1>
+        </hgroup>
+      </header>
+      <article>
+        <p>The UK Government Digital Service has a practice of <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>. That means a lot of public repositories end up in our github account. Those repositories can be hard to navigate so we're assembling a guide to it here, identifying the pieces we think are likely to be useful to others and then the projects that other code is focussed on.</p>
+      </article>
+      <article>
+				<h2>Libraries and Utilities</h2>
+
+		<ul>
+			<li>
+				<h3>
+					<a href="https://github.com/alphagov/unicornherder">Unicorn Herder</a> (python)
+				</h3>
+				<p>Unicorn Herder is a utility designed to assist in the use of Upstart and similar supervisors with Unicorn. It does this by polling the pidfile written by the Unicorn master process, and automating the sequence of signals that must be sent to the master to do a "hot-reload". If Unicorn quits, so will the Unicorn Herder, meaning that if you supervise the herder (which does not daemonize), you are effectively supervising the Unicorn process.</p>
+			</li>
+			<li>
+				<h3>
+					<a href="https://github.com/alphagov/fake_google_analytics">Fake Google Analytics</a> (ruby)
+				</h3>
+				<p>Fake Google Analytics (GA) is a tool used to shorten the feedback loop when testing the interaction of a website with Google Analytics. It does so by redirecting all traffic to www.google-analytics.com to the web server run locally, storing it in the file, and exposing via simple HTTP interface. (an entry in /etc/hosts is added)</p>
+			</li>
+			<li>
+				<h3>
+					<a href="https://github.com/alphagov/character_encoding_cleaner">Character Encoding Cleaner</a> (ruby)
+				</h3>
+				<p>This script is for fixing illegal encodings in text files. It's designed to clean up corrupt character sequences in UTF-8 files. The most common cause of such corruption is opening a UTF-8 encoded file as though it were ISO-8859-1, and then saving it as UTF-8.</p>
+			</li>
+			<li>
+				<h3><a href="https://github.com/alphagov/google-auth-bridge">Google Auth Bridge</a></h3>
+				<p>Google allow you to authenticate with their APIs with OAuth. That process can be a little tedious if you have to do it over and over. Google Authentication Bridge allows you to authenticate with Google and will store the refresh token in a file for subsequent use.</p>
+			</li>
+			<li>
+				<h3><a href="https://github.com/alphagov/magna-charta">Magna Charta</a> (javascript)</h3>
+				<p>A javascript library (currently a jQuery plugin) for producing bar charts from tables.</p>
+			</li>
+			<li>
+				<h3><a href="https://github.com/alphagov/passphrase_entropy">PassphraseEntropy</a> (ruby)</h3>
+				<p>Estimate the entropy of a passphrase. This is calculated as the number of bytes required to encode the passphrase on top of a Deflate stream of a preset dictionary.</p>
+				<p>Inspired by <a href="http://xkcd.com/936/">xkcd 936</a>.</p>
+			</li>
+			<li>
+				<h3><a href="https://github.com/alphagov/rack-geo">Rack::Geo</a> (ruby)</h3>
+				<p>Simple Rack middleware which processes incoming requests and adds, updates, and passes through as a Header, Geo-location information</p>
+			</li>
+			<li><h3><a href="https://github.com/alphagov/sbv-to-ttaf">SBV to TTAF</a> (ruby)</h3>
+				<p>Convert SBV caption files to the Timed Text Authoring Format XML schema used by the Nomensa accessible video player.</p></li>
+		</ul>
+
+		<h2>A little background</h2>
+
+		<h3>Who is this code by?</h3>
+
+		<p>This is the github account of the Government Digital Service, a unit of the UK government's Cabinet Office tasked with delivering digital by default. For more on GDS and the UK government's digital strategy <a href="http://digital.cabinet-office.gov.uk">see the GDS blog</a>.</p>
+
+		<h3>Why alphagov?</h3>
+
+		<p><a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated that the GOV.UK project (and the Government Digital Service with it) could work. It was launched in May 2011 and remained live until the beta of GOV.UK launched at the end of January 2012. This github account was set up for that project and then developed to be the main account for the Government Digital Service.</p>
+	</body>
 </html>
