@@ -541,6 +541,31 @@ body {
 				</ul>
 			</article>
 			<article>
+				<h2>Transitioning to GOV.UK</h2>
+				<p>We built a set of tools to support the transition from DirectGov, BusinessLink and a host of other websites onto GOV.UK. You can read an overview of that in <a href="http://digital.cabinetoffice.gov.uk/2012/10/11/no-link-left-behind/">No Link Left Behind</a> and <a href="http://digital.cabinetoffice.gov.uk/2012/12/10/testing-the-redirections/"Testing The Redirections</a>. The key chunks of code were:</p>
+			
+				<ul>
+					<li>
+					  <h3><a href="https://github.com/alphagov/migratorator">Migratorator</a></h3>
+					  <p>The Migratorator is a Rails app, backed by a MongoDB database. It allows multiple users to create one-to-one mappings for each URL, where the mapping consists of the source URL, status (whether it will be redirected or whether, no longer representing a user need, it is now gone) and, if applicable, the page to which it will be redirected.</p>	
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/review-o-matic">Review-o-matic</a></h3>
+						<p>We needed to confirm that the mappings were actually correct. We wanted several people to check each mapping, so we created the Review-O-Matic.
+The Review-O-Matic is also a Rails app and uses the Migratorator API to display the source URL and the mapped URL in a side-by-side browser, with voting buttons.</p>
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/review-o-matic-explore">Side-by-side Browser</a> (aka Review-o-matic-Explorer)</h3>
+						<p>The Side-by-side browser is a Node.js proxy that serves itself and the site being reviewed on the same domain, so that it’s ‘live’ and not blocked by the Same-Origin policy. The Side-by-side Browser displays the old and the new websites next to each other. Clicking a link on the left hand side displays what this will redirect to on the right hand side.</p>
+					</li>
+					<li>
+						<h3><a href="https://github.com/alphagov/redirector/">The Redirector</a></h3>
+						<p>The Redirector project is just the process for generating the Nginx configuration. It’s written mainly in Perl with some PHP.
+Generating the Nginx config requires logic to determine from the old URL what kind of configuration should be used. This logic, plus the mappings we gathered, make up much of the Redirector project.</p>
+					</li>
+				</ul>
+			</article>
+			<article>
 				<h2>Coming Soon</h2>
 				<p>Overviews of: GOV.UK publishing, tools for operating GOV.UK, Data Insights, and a few other repos.</p>
 			</article>
