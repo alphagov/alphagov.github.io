@@ -11,64 +11,40 @@ html {
   font-size: 62.5%;
 }
 
-@media (max-width: 900px) {
-  html {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 1100px) {
-  html {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1300px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media (min-width: 1400px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1500px) {
-  html {
-    font-size: 15px;
-  }
-}
-
 body {
-  margin-top: 0;
+  margin: 0;
+  background-color: #fff; 
+  padding: 0 40px;
+  padding: 0 4rem;
+/*   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2))); */
+  -webkit-background-size: 100% 10px;
 }
 
+@media (max-width: 639px) {
+  body {
+    padding: 0 15px;
+  }
+}
+  
 #wrapper {
-  color: #000;
-  background: #fff;
+  color: #333;
+  color: rgba(0,0,0,0.75);
   font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 1.4444444444;
-  font-weight: 300;
-  padding: 0 104px 13px 104px;
-  padding: 0 10.4rem 1.3rem 10.4rem;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 30px;
+  font-weight: 500;
+  padding: 80px 0;
+  padding: 8rem 0;
   margin: 0 auto;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   #wrapper {
-    padding: 0 26px 13px;
-    padding: 0 2.6rem 1.3rem;
+    padding: 20px 0;
+    font-size: 17px;
+    line-height: 22px;
   }
 }
 
@@ -85,403 +61,140 @@ body {
 #wrapper article {
   clear: both;
   margin: 0 auto;
-  max-width: 700px;
-  max-width: 70rem;
   position: relative;
-}
-
-#wrapper article {
-  padding-top: 36px;
-  padding-top: 3.6rem;
-}
-
-#wrapper header nav {
-  padding: 13px 0 25px 0;
-  padding: 1.3rem 0 2.6rem 0;
-}
-
-#wrapper header hgroup {
-  background-color: #000;
-  margin: 0 -75px 0 -75px;
-  margin: 0 -7.5rem 0 -7.5rem;
-}
-
-@media (max-width: 640px) {
-  #wrapper header hgroup {
-    margin: 0 -25px;
-    margin: 0 -2.5rem;
-  }
 }
 
 .lte-ie8 #wrapper header hgroup {
   margin: 0;
 }
 
-#wrapper header h1 {
-  background-color: #000;
-  color: #fff;
-  font-size: 26px;
-  font-size: 2.6rem;
-  line-height: 1.1555555556;
-  font-weight: 300;
-  overflow: auto;
-  padding: 13px 50px 13px 75px;
-  padding: 1.3rem 2.5rem 1.3rem 7.5rem;
-  position: relative;
-}
-
-@media (max-width: 640px) {
-  #wrapper header h1 {
-    font-size: 26px;
-    font-size: 2.6rem;
-    padding: 8px 25px 8px 35px;
-    padding: 0.8rem 2.5rem 0.8rem 3.5rem;
-  }
-}
-
-.lte-ie8 #wrapper header h1 {
-  padding: 8px 25px;
-}
-
-#wrapper header h1 strong {
-  float: right;
-}
-
-@media (max-width: 640px) {
-  #wrapper header h1 strong {
-    float: none;
-  }
-}
-
-#wrapper header h2 {
-  color: #fff;
-  margin: 0;
-  padding: 8px 50px 17px 75px;
-  padding: 0.8em 5rem 1.7rem 7.5rem;
-}
-
-@media (max-width: 640px) {
-  #wrapper header h2 {
-    padding: 8px 25px 17px 35px;
-    padding: 0.8rem 2.5rem 1.7rem 3.5rem;
-  }
-}
-
-.lte-ie8 #wrapper header h2 {
-  padding: 8px 25px;
-}
-
-#wrapper header h3 {
-  background-color: #D43783;
-  color: #fff;
-  font-family: "Gill Sans W01 Medium", "Gill Sans MT Pro", "Gill Sans", GillSans, sans-serif;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  padding: 8px 13px;
-  padding: 0.8rem 1.3rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: 0;
-  right: 75px;
-  right: -7.5rem;
-}
-
-@media (max-width: 640px) {
-  #wrapper header h3 {
-    right: 25px;
-    right: -2.5rem;
-  }
-}
-
-.lte-ie8 #wrapper header h3 {
-  right: 0px;
-}
-
-#wrapper blockquote {
-  padding: 10px 5%;
-  margin-bottom: 20px;
+#wrapper p {
+  max-width: 36em;
 }
 
 #wrapper a {
-  border-bottom: 1px solid #2E8ACA;
-  color: #2E8ACA;
-  font-weight: 400;
+  color: #2b8cc4;
   text-decoration: none;
 }
 
 #wrapper a:hover,
 #wrapper a:focus {
-  border-color: #ddd;
+  color: #346f91;
+  border-bottom: 1px solid;
 }
 
 #wrapper a:active {
-  color: #2E8ACA;
-}
-
-#wrapper strong {
-  font-weight: 500;
-}
-
-.lte-ie8 #wrapper strong {
-  font-weight: 600;
-}
-
-#wrapper img {
-  max-width: 100%;
-}
-
-#wrapper table {
-  text-align: left;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: 17px;
-  margin: 1.7rem 0;
-}
-
-#wrapper table thead {
-  vertical-align: bottom;
-}
-
-#wrapper table th {
-  background-color: #eee;
-}
-
-#wrapper table th,
-#wrapper table td {
-  padding: 10px 7.5px;
-  padding: 1rem 0.75rem;
-}
-
-#wrapper table tbody {
-  vertical-align: top;
-}
-
-#wrapper table td {
-  border: solid 2px #eee;
-  border-left: none;
-  border-right: none;
-}
-
-#wrapper header h1 strong,
-#wrapper header h2,
-#wrapper article h1 {
-  display: block;
-  font-family: "Gill Sans W01 Medium", "Gill Sans MT Pro", "Gill Sans", GillSans, sans-serif;
-  font-size: 23px;
-  font-size: 2.3rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-}
-
-@media (max-width: 640px) {
-  #wrapper article {
-    padding-left: 1rem;
-  }
-}
-
-#wrapper article h1 {
-  padding: 18px 0 8px;
-  padding: 1.8rem 0 0.8rem;
-}
-
-#wrapper article h2 {
-  line-height: 1.3;
-  font-weight: 500;
-  padding: 13px 0;
-  padding: 1.3rem 0;
-}
-
-#wrapper article h1 + h2,
-#wrapper article h1 + ol,
-#wrapper article h1 + ul {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-#wrapper article h4 {
-  float: left;
-  margin-left: -75px;
-  margin-left: -7.5rem;
-  text-align: right;
-  width: 45px;
-  width: 4.5rem;
-}
-
-@media (max-width: 640px) {
-  #wrapper article h4 {
-    margin-left: 35px;
-    margin-left: -3.5rem;
-    width: 25px;
-    width: 2.5rem;
-  }
-}
-
-.lte-ie8 #wrapper h4 {
-  _display: inline;
-}
-
-#wrapper article p,
-#wrapper article ol,
-#wrapper article ul {
-  margin-bottom: 13px;
-  margin-bottom: 1.3rem;
-}
-
-.lte-ie8 #wrapper article li {
-  margin-left: 20px;
-}
-
-#wrapper article li > ul,
-#wrapper article li > ol {
-  margin-top: 0;
-  padding-left: 20px;
-  padding-left: 2rem;
-}
-
-#wrapper article section {
-  position: relative;
-  padding-top: 36px;
-  padding-top: 3.6rem;
-}
-
-/* index and agenda specific */
-
-#wrapper.index header h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
-  padding-top: 18px;
-  padding-top: 1.8rem;
-}
-
-#wrapper.index article ol li,
-#wrapper.agenda article ol li {
-  margin-bottom: 13px;
-  margin-bottom: 1.3rem;
-}
-
-.lte-ie8 #wrapper.agenda article ol li {
-  margin-left: 45px;
-}
-
-#wrapper.index article ol li {
-  list-style-type: none;
-}
-
-.lte-ie8 #wrapper.index article ol li {
-  margin-left: 0;
-}
-
-/* colours */
-
-#wrapper.purple header hgroup {
-  background-color: #2e358b;
-}
-#wrapper.purple article h1,
-#wrapper a.purple {
-  border-bottom-color: #2e358b;
-  color: #2e358b;
-}
-#wrapper.babypink header hgroup {
-  background-color: #f499be;
-}
-#wrapper.babypink article h1,
-#wrapper a.babypink {
-  border-bottom-color: #f499be;
-  color: #f499be;
-}
-
-#wrapper.green header hgroup {
-  background-color: #00652E;
-}
-#wrapper.green article h1,
-#wrapper a.green {
-  border-bottom-color: #00652E;
-  color: #00652E;
-}
-#wrapper.fuschia header hgroup {
-  background-color: #912b88;
-}
-#wrapper.fuschia article h1,
-#wrapper a.fuschia {
-  border-bottom-color: #912b88;
-  color: #912b88;
-}
-#wrapper.mauve header hgroup {
-  background-color: #6f72af;
-}
-#wrapper.mauve article h1,
-#wrapper a.mauve {
-  border-bottom-color: #6f72af;
-  color: #6f72af;
-}
-#wrapper.pink header hgroup {
-  background-color: #d53880;
-}
-#wrapper.pink article h1,
-#wrapper a.pink {
-  border-bottom-color: #d53880;
-  color: #d53880;
-}
-#wrapper.mellow-red header hgroup {
-  background-color: #df3034;
-}
-#wrapper.mellow-red article h1,
-#wrapper a.mellow-red {
-  border-bottom-color: #df3034;
   color: #df3034;
-}
-#wrapper.red header hgroup {
-  background-color: #b10e1e;
-}
-#wrapper.red article h1,
-#wrapper a.red {
-  border-bottom-color: #b10e1e;
-  color: #b10e1e;
-}
-#wrapper.orange header hgroup {
-  background-color: #f47738;
-}
-#wrapper.orange article h1,
-#wrapper a.orange {
-  border-bottom-color: #f47738;
-  color: #f47738;
-}
-#wrapper.blue header hgroup {
-  background-color: #2E3191;
-}
-#wrapper.blue article h1,
-#wrapper a.blue {
-  border-bottom-color: #2E3191;
-  color: #2E3191;
-}
-#wrapper.brown header hgroup {
-  background-color: #b58840;
-}
-#wrapper.brown article h1,
-#wrapper a.brown {
-  border-bottom-color: #b58840;
-  color: #b58840;
-}
-#wrapper.yellow header hgroup {
-  background-color: #ffbf47;
-}
-#wrapper.yellow article h1,
-#wrapper a.yellow {
-  border-bottom-color: #ffbf47;
-  color: #ffbf47;
+  border-color: #df3034;
 }
 
-#wrapper.turquoise header hgroup {
-  background-color: #28a197;
+#wrapper h1 {
+  font-size: 37px;
+  font-size: 3.75rem;
+  line-height: 1.333;
+} 
+
+@media (max-width: 639px) {
+  #wrapper h1 {
+    font-size: 22px;
+    line-height: 1;
+  }
 }
-#wrapper.turquoise article h1,
-#wrapper a.turquoise {
-  border-bottom-color: #28a197;
-  color: #28a197;
+
+#wrapper h1, 
+#wrapper h2, 
+#wrapper h3 {
+  color: black;
 }
+
+#wrapper h2 {
+  padding-top: 90px;
+  padding-top: 9rem;
+}
+
+#wrapper h1 + p {
+  padding-top: 35px;
+  padding-top: 3.5rem;
+}
+
+#wrapper h2 + p,
+#wrapper p + h3,
+#wrapper h2 + h3 {
+  padding-top: 40px;
+  padding-top: 4rem;
+}
+
+#wrapper ul {
+  position: relative;
+  margin: 44px -40px 5px;
+  margin: 4.4rem -4rem 0.5rem;
+  overflow: visible;
+  border-top: 1px solid #ddd;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 1.5384615385;
+  font-weight: 800;
+}
+
+@media (max-width: 639px) {
+  #wrapper ul {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+#wrapper li {
+  overflow: hidden;
+  padding: 14px 40px 25px;
+  padding: 1.4rem 4rem 2.5rem;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 639px) {
+  #wrapper li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+#wrapper li p strong {
+  text-transform: capitalize;
+}
+  
+#wrapper li p strong:after {
+  content: "!";
+}
+
+
+@media (min-width: 640px) {
+
+  #wrapper li h3 {
+    float: left;
+    width: 20%;
+  }
+
+  #wrapper li p {
+    position: relative;
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    max-width: 100%;
+  }
+  
+  #wrapper li p strong {
+    position: absolute;
+    float: left;
+    margin-left: -33.333%;
+    padding-left: 20px;
+  }
+  
+  #wrapper li p strong:after {
+    content: "!";
+  }
+  
+}
+
 </style>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -492,76 +205,71 @@ body {
       <header>
         <hgroup>
           <h1>Government Digital Service</h1>
+          <p>The UK Government Digital Service has a practice of <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>. That means a lot of public repositories end up in our github account. Those repositories can be hard to navigate so we're assembling a guide to it here, identifying the pieces we think are likely to be useful to others and then the projects that other code is focussed on.</p>
         </hgroup>
       </header>
-      <article>
-      	<p>The UK Government Digital Service has a practice of <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>. That means a lot of public repositories end up in our github account. Those repositories can be hard to navigate so we're assembling a guide to it here, identifying the pieces we think are likely to be useful to others and then the projects that other code is focussed on.</p>
-      </article>
-      <article>
-				<h2>Libraries and Utilities</h2>
+      <article class="collection">
+				<h2>Libraries &amp; Utilities</h2>
 
 				<ul>
 					<li>
 						<h3>
-							<a href="https://github.com/alphagov/unicornherder">Unicorn Herder</a> (python)
+							<a href="https://github.com/alphagov/unicornherder">Unicorn Herder</a>
 						</h3>
-						<p>Unicorn Herder is a utility designed to assist in the use of Upstart and similar supervisors with Unicorn. It does this by polling the pidfile written by the Unicorn master process, and automating the sequence of signals that must be sent to the master to do a "hot-reload". If Unicorn quits, so will the Unicorn Herder, meaning that if you supervise the herder (which does not daemonize), you are effectively supervising the Unicorn process.</p>
+						<p><strong>python</strong> Unicorn Herder is a utility designed to assist in the use of Upstart and similar supervisors with Unicorn.</p>
 					</li>
 					<li>
 						<h3>
-							<a href="https://github.com/alphagov/fake_google_analytics">Fake Google Analytics</a> (ruby)
+							<a href="https://github.com/alphagov/fake_google_analytics">Fake Google Analytics</a>
 						</h3>
-						<p>Fake Google Analytics (GA) is a tool used to shorten the feedback loop when testing the interaction of a website with Google Analytics. It does so by redirecting all traffic to www.google-analytics.com to the web server run locally, storing it in the file, and exposing via simple HTTP interface. (an entry in /etc/hosts is added)</p>
+						<p><strong>ruby</strong> Fake Google Analytics (GA) is a tool used to shorten the feedback loop when testing the interaction of a website with Google Analytics.</p>
 					</li>
 					<li>
 						<h3>
-							<a href="https://github.com/alphagov/character_encoding_cleaner">Character Encoding Cleaner</a> (ruby)
+							<a href="https://github.com/alphagov/character_encoding_cleaner">Character Encoding Cleaner</a>
 						</h3>
-						<p>This script is for fixing illegal encodings in text files. It's designed to clean up corrupt character sequences in UTF-8 files. The most common cause of such corruption is opening a UTF-8 encoded file as though it were ISO-8859-1, and then saving it as UTF-8.</p>
+						<p><strong>ruby</strong> This script is for fixing illegal encodings in text files. It's designed to clean up corrupt character sequences in UTF-8 files.</p>
 					</li>
 					<li>
 						<h3><a href="https://github.com/alphagov/google-auth-bridge">Google Auth Bridge</a></h3>
-						<p>Google allow you to authenticate with their APIs with OAuth. That process can be a little tedious if you have to do it over and over. Google Authentication Bridge allows you to authenticate with Google and will store the refresh token in a file for subsequent use.</p>
+						<p>Google allow you to authenticate with their APIs with OAuth.</p>
 					</li>
 					<li>
-						<h3><a href="https://github.com/alphagov/magna-charta">Magna Charta</a> (javascript)</h3>
-						<p>A javascript library (currently a jQuery plugin) for producing bar charts from tables.</p>
+						<h3><a href="https://github.com/alphagov/magna-charta">Magna Charta</a></h3>
+						<p><strong>javascript</strong> A javascript library (currently a jQuery plugin) for producing bar charts from tables.</p>
 					</li>
 					<li>
-						<h3><a href="https://github.com/alphagov/passphrase_entropy">PassphraseEntropy</a> (ruby)</h3>
-						<p>Estimate the entropy of a passphrase. This is calculated as the number of bytes required to encode the passphrase on top of a Deflate stream of a preset dictionary.</p>
-						<p>Inspired by <a href="http://xkcd.com/936/">xkcd 936</a>.</p>
+						<h3><a href="https://github.com/alphagov/passphrase_entropy">PassphraseEntropy</a></h3>
+						<p><strong>ruby</strong> Estimate the entropy of a passphrase. Inspired by <a href="http://xkcd.com/936/">xkcd 936</a>.</p>
 					</li>
 					<li>
-						<h3><a href="https://github.com/alphagov/rack-geo">Rack::Geo</a> (ruby)</h3>
-						<p>Simple Rack middleware which processes incoming requests and adds, updates, and passes through as a Header, Geo-location information</p>
+						<h3><a href="https://github.com/alphagov/rack-geo">Rack::Geo</a></h3>
+						<p><strong>ruby</strong> Simple Rack middleware which processes incoming requests and adds, updates, and passes through as a Header, Geo-location information</p>
 					</li>
-					<li><h3><a href="https://github.com/alphagov/sbv-to-ttaf">SBV to TTAF</a> (ruby)</h3>
-						<p>Convert SBV caption files to the Timed Text Authoring Format XML schema used by the <a href="https://github.com/nomensa/Accessible-Media-Player">Nomensa accessible video player</a>.</p></li>
+					<li><h3><a href="https://github.com/alphagov/sbv-to-ttaf">SBV to TTAF</a></h3>
+						<p><strong>ruby</strong> Convert SBV caption files to the Timed Text Authoring Format XML schema used by the <a href="https://github.com/nomensa/Accessible-Media-Player">Nomensa accessible video player</a>.</p></li>
 				</ul>
 			</article>
-			<article>
+      <article class="collection">
 				<h2>Transitioning to GOV.UK</h2>
 				<p>We built a set of tools to support the transition from DirectGov, BusinessLink and a host of other websites onto GOV.UK. You can read an overview of that in <a href="http://digital.cabinetoffice.gov.uk/2012/10/11/no-link-left-behind/">No Link Left Behind</a> and <a href="http://digital.cabinetoffice.gov.uk/2012/12/10/testing-the-redirections/">Testing The Redirections</a>. The key chunks of code were:</p>
 			
 				<ul>
 					<li>
 					  <h3><a href="https://github.com/alphagov/migratorator">Migratorator</a></h3>
-					  <p>The Migratorator is a Rails app, backed by a MongoDB database. It allows multiple users to create one-to-one mappings for each URL, where the mapping consists of the source URL, status (whether it will be redirected or whether, no longer representing a user need, it is now gone) and, if applicable, the page to which it will be redirected.</p>	
+					  <p>Allows multiple users to create one-to-one mappings for each URL, where the mapping consists of the source URL, status (whether it will be redirected or whether, no longer representing a user need, it is now gone) and, if applicable, the page to which it will be redirected.</p>	
 					</li>
 					<li>
 						<h3><a href="https://github.com/alphagov/review-o-matic">Review-o-matic</a></h3>
 						<p>We needed to confirm that the mappings were actually correct. We wanted several people to check each mapping, so we created the Review-O-Matic.
-The Review-O-Matic is also a Rails app and uses the Migratorator API to display the source URL and the mapped URL in a side-by-side browser, with voting buttons.</p>
 					</li>
 					<li>
 						<h3><a href="https://github.com/alphagov/review-o-matic-explore">Side-by-side Browser</a> (aka Review-o-matic-Explorer)</h3>
-						<p>The Side-by-side browser is a Node.js proxy that serves itself and the site being reviewed on the same domain, so that it's 'live' and not blocked by the Same-Origin policy. The Side-by-side Browser displays the old and the new websites next to each other. Clicking a link on the left hand side displays what this will redirect to on the right hand side.</p>
+						<p>The Side-by-side browser is a Node.js proxy that serves itself and the site being reviewed on the same domain, so that it's 'live' and not blocked by the Same-Origin policy.</p>
 					</li>
 					<li>
 						<h3><a href="https://github.com/alphagov/redirector/">The Redirector</a></h3>
-						<p>The Redirector project drives the process of generating the Nginx configuration for redirection. It's written mainly in Perl with some PHP.
-Generating the Nginx config requires logic to determine from the old URL what kind of configuration should be used. This logic, plus the mappings we gathered, make up much of the Redirector project.</p>
+						<p>The Redirector project drives the process of generating the Nginx configuration for redirection.</p>
 					</li>
 				</ul>
 			</article>
