@@ -14,7 +14,7 @@
         <dependency>
             <groupId>uk.gov.gds</groupId>
             <artifactId>gds-scala-utils_2.9.1</artifactId>
-            <version>0.7.3-SNAPSHOT</version>
+            <version>0.7.5-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
