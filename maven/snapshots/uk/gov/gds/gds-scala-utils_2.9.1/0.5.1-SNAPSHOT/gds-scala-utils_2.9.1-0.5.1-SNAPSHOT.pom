@@ -97,11 +97,5 @@
             <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
             <layout>default</layout>
         </repository>
-        <repository>
-            <id>reposcalatoolsreleases</id>
-            <name>repo scalatools releases</name>
-            <url>https://oss.sonatype.org/content/groups/scala-tools/</url>
-            <layout>default</layout>
-        </repository>
     </repositories>
 </project>
