@@ -1,0 +1,43 @@
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+groups:
+  transitioning_to_govuk:
+    name: Transitioning to GOV.UK
+    bio: |
+      We built a set of tools to support the transition from DirectGov, BusinessLink and a host
+      of other websites onto GOV.UK. You can read an overview of that in
+      <a href='https://gds.blog.gov.uk/2012/10/11/no-link-left-behind/'>No Link Left Behind</a> and
+      <a href='https://gds.blog.gov.uk/2012/12/10/testing-the-redirections/'>Testing The Redirections</a>.
+    repos:
+      - transition
+      - redirector
+  performance_platform:
+    name: Performance Platform
+    bio: |
+      The <a href='https://www.gov.uk/performance'>Performance Platform</a>
+      team creates dashboards to show the performance of
+      government over time. We occasionally post on the
+      <a href='https://gdsdata.blog.gov.uk/'>Data at GDS</a> blog.
+    repos:
+      - spotlight
+      - backdrop
+      - pp-puppet
+  libraries_and_utilities:
+    name: Libraries and utilities
+    repos:
+      - unicornherder
+      - fake_google_analytics
+      - character_encoding_cleaner
+      - google-auth-bridge
+      - magna-charta
+      - rack-geo
+      - sbv-to-ttaf
+  office_tools:
+    name: Tools for the office
+    bio: We have a lot of code that shows up on displays around our office.
+    repos:
+      - fourth-wall
+      - showtime

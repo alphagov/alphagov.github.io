@@ -1,354 +1,83 @@
+---
+---
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="lte-ie8" lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en">
-<!--<![endif]-->
-<html>
-  <head>
-    <title>GDS Code</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style type="text/css">
-    /*main.css*/
+<head>
+  <meta charset='utf-8' />
+  <title>Government Digital Service on GitHub</title>
+  <link rel="stylesheet" type="text/css" href="gds.css"></link>
+</head>
 
-html {
-  font-size: 62.5%;
-}
+<body>
 
-body {
-  margin: 0;
-  background-color: #fff;
-  padding: 0 40px;
-  padding: 0 4rem;
-/*   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2))); */
-  -webkit-background-size: 100% 10px;
-}
+  <h1>Government Digital Service</h1>
 
-@media (max-width: 639px) {
-  body {
-    padding: 0 15px;
-  }
-}
+  <p id="intro">
+    The UK Government Digital Service has a practice of
+    <a href="https://gds.blog.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>.
+    That means a lot of public repositories end up on
+    <a href="https://github.com/alphagov">our GitHub account</a>.
+    Those repositories can be hard to navigate so we're assembling a guide here.
+  </p>
 
-#wrapper {
-  color: #333;
-  color: rgba(0,0,0,0.75);
-  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 30px;
-  font-weight: 500;
-  padding: 80px 0;
-  padding: 8rem 0;
-  margin: 0 auto;
-}
+  {% for group in site.groups %}
+    <section class="gds-group">
 
-@media (max-width: 639px) {
-  #wrapper {
-    padding: 20px 0;
-    font-size: 17px;
-    line-height: 22px;
-  }
-}
+      <h2>{{ group[1].name }}</h2>
 
-#wrapper * {
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-}
+      {% if group[1].bio %}
+        <p>{{ group[1].bio }}</p>
+      {% endif %}
 
-#wrapper header,
-#wrapper article {
-  clear: both;
-  margin: 0 auto;
-  position: relative;
-}
+      {% for repo in group[1].repos %}
+        {% comment %}
+          Iterate over all alphagov repos each time we try to output a repo.
+          We do this because there's no way to select an element from an array with Liquid.
+        {% endcomment %}
+        {% for alphagov_repo in site.github.public_repositories %}
+          {% if alphagov_repo.name == repo %}
+            <div class="repo">
+              <a href="{{ alphagov_repo.html_url }}">
+                <h3>{{ alphagov_repo.name }}</h3>
+              </a>
+              <p>{{ alphagov_repo.description }}</p>
+              <p>Created in {{ alphagov_repo.created_at | date: '%B %Y' }}, last updated in {{ alphagov_repo.updated_at | date: '%B %Y' }}. Written in {{ alphagov_repo.language }}.</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
 
-.lte-ie8 #wrapper header hgroup {
-  margin: 0;
-}
+    </section>
+  {% endfor %}
 
-#wrapper p {
-  max-width: 36em;
-}
+  <aside>
 
-#wrapper a {
-  color: #2b8cc4;
-  text-decoration: none;
-}
+    <h2>
+      Who is this code by?
+    </h2>
 
-#wrapper a:hover,
-#wrapper a:focus {
-  color: #346f91;
-  border-bottom: 1px solid;
-}
+    <p>
+      This is the GitHub account of the Government Digital Service, a unit of the UK government's
+      Cabinet Office tasked with delivering digital by default. For more on GDS and the
+      UK government's digital strategy <a href="https://gds.blog.gov.uk/">see the GDS blog</a>.
+    </p>
 
-#wrapper a:active {
-  color: #df3034;
-  border-color: #df3034;
-}
+    <h2>
+      Why ‘alphagov’?
+    </h2>
 
-#wrapper h1 {
-  font-size: 37px;
-  font-size: 3.75rem;
-  line-height: 1.333;
-}
+    <p>
+      <a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated
+      that the GOV.UK project (and the Government Digital Service with it) could work.
+      It was launched in May 2011 and remained live until the beta of GOV.UK launched
+      at the end of January 2012. This GitHub account was set up for that project and
+      then became the main account for the Government Digital Service.
+    </p>
 
-@media (max-width: 639px) {
-  #wrapper h1 {
-    font-size: 22px;
-    line-height: 1;
-  }
-}
+    <p>
+      We use the <a href="https://gds-attic.github.io/">GDS attic GitHub account</a> to store
+      repositories that we've used in the past but no longer maintain.
+    </p>
 
-#wrapper h1,
-#wrapper h2,
-#wrapper h3 {
-  color: black;
-}
+  </aside>
 
-#wrapper h2 {
-  padding-top: 90px;
-  padding-top: 9rem;
-}
-
-#wrapper h1 + p {
-  padding-top: 35px;
-  padding-top: 3.5rem;
-}
-
-#wrapper h2 + p,
-#wrapper p + h3,
-#wrapper h2 + h3 {
-  padding-top: 40px;
-  padding-top: 4rem;
-}
-
-#wrapper ul {
-  position: relative;
-  margin: 44px -40px 5px;
-  margin: 4.4rem -4rem 0.5rem;
-  overflow: visible;
-  border-top: 1px solid #ddd;
-  font-size: 13px;
-  font-size: 1.3rem;
-  line-height: 1.5384615385;
-  font-weight: 800;
-}
-
-@media (max-width: 639px) {
-  #wrapper ul {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-}
-
-#wrapper li {
-  overflow: hidden;
-  padding: 14px 40px 25px;
-  padding: 1.4rem 4rem 2.5rem;
-  list-style: none;
-  border-bottom: 1px solid #ddd;
-}
-
-@media (max-width: 639px) {
-  #wrapper li {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-#wrapper li p strong {
-  text-transform: capitalize;
-}
-
-#wrapper li p strong:after {
-  content: "!";
-}
-
-
-@media (min-width: 640px) {
-
-  #wrapper li h3 {
-    float: left;
-    width: 20%;
-  }
-
-  #wrapper li p {
-    position: relative;
-    float: left;
-    width: 60%;
-    margin-left: 20%;
-    max-width: 100%;
-  }
-
-  #wrapper li p strong {
-    position: absolute;
-    float: left;
-    margin-left: -33.333%;
-    padding-left: 20px;
-  }
-
-  #wrapper li p strong:after {
-    content: "!";
-  }
-
-}
-
-</style>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div id="wrapper" class="index">
-      <header>
-        <hgroup>
-          <h1>Government Digital Service</h1>
-          <p>The UK Government Digital Service has a practice of <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>. That means a lot of public repositories end up in our GitHub account. Those repositories can be hard to navigate so we're assembling a guide to it here, identifying the pieces we think are likely to be useful to others and then the projects that other code is focussed on.</p>
-        </hgroup>
-      </header>
-      <article class="collection">
-        <h2>Libraries &amp; Utilities</h2>
-
-        <ul>
-          <li>
-            <h3>
-              <a href="https://github.com/alphagov/unicornherder">Unicorn Herder</a>
-            </h3>
-            <p><strong>python</strong> Unicorn Herder is a utility designed to assist in the use of Upstart and similar supervisors with Unicorn.</p>
-          </li>
-          <li>
-            <h3>
-              <a href="https://github.com/alphagov/fake_google_analytics">Fake Google Analytics</a>
-            </h3>
-            <p><strong>ruby</strong> Fake Google Analytics (GA) is a tool used to shorten the feedback loop when testing the interaction of a website with Google Analytics.</p>
-          </li>
-          <li>
-            <h3>
-              <a href="https://github.com/alphagov/character_encoding_cleaner">Character Encoding Cleaner</a>
-            </h3>
-            <p><strong>ruby</strong> This script is for fixing illegal encodings in text files. It's designed to clean up corrupt character sequences in UTF-8 files.</p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/google-auth-bridge">Google Auth Bridge</a></h3>
-            <p>Google allow you to authenticate with their APIs with OAuth.</p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/magna-charta">Magna Charta</a></h3>
-            <p><strong>javascript</strong> A javascript library (currently a jQuery plugin) for producing bar charts from tables.</p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/passphrase_entropy">PassphraseEntropy</a></h3>
-            <p><strong>ruby</strong> Estimate the entropy of a passphrase. Inspired by <a href="http://xkcd.com/936/">xkcd 936</a>.</p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/rack-geo">Rack::Geo</a></h3>
-            <p><strong>ruby</strong> Simple Rack middleware which processes incoming requests and adds, updates, and passes through as a Header, Geo-location information</p>
-          </li>
-          <li><h3><a href="https://github.com/alphagov/sbv-to-ttaf">SBV to TTAF</a></h3>
-            <p><strong>ruby</strong> Convert SBV caption files to the Timed Text Authoring Format XML schema used by the <a href="https://github.com/nomensa/Accessible-Media-Player">Nomensa accessible video player</a>.</p></li>
-        </ul>
-      </article>
-      <article class="collection">
-        <h2>Transitioning to GOV.UK</h2>
-        <p>We built a set of tools to support the transition from DirectGov, BusinessLink and a host of other websites onto GOV.UK. You can read an overview of that in <a href="http://digital.cabinetoffice.gov.uk/2012/10/11/no-link-left-behind/">No Link Left Behind</a> and <a href="http://digital.cabinetoffice.gov.uk/2012/12/10/testing-the-redirections/">Testing The Redirections</a>. The key chunks of code were:</p>
-
-        <ul>
-          <li>
-            <h3><a href="https://github.com/alphagov/migratorator">Migratorator</a></h3>
-            <p>Allows multiple users to create one-to-one mappings for each URL, where the mapping consists of the source URL, status (whether it will be redirected or whether, no longer representing a user need, it is now gone) and, if applicable, the page to which it will be redirected.</p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/review-o-matic">Review-o-matic</a></h3>
-            <p>We needed to confirm that the mappings were actually correct. We wanted several people to check each mapping, so we created the Review-O-Matic.
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/review-o-matic-explore">Side-by-side Browser</a> (aka Review-o-matic-Explorer)</h3>
-            <p>The Side-by-side browser is a Node.js proxy that serves itself and the site being reviewed on the same domain, so that it's 'live' and not blocked by the Same-Origin policy.</p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/redirector/">The Redirector</a></h3>
-            <p>The Redirector project drives the process of generating the Nginx configuration for redirection.</p>
-          </li>
-        </ul>
-      </article>
-
-      <article class="collection">
-        <h2>Performance Platform</h2>
-
-        <p>
-          The <a href="https://www.gov.uk/performance">Performance Platform</a> team
-          creates dashboards to show the performance of government over time. We
-          occasionally post on the <a href="https://gdsdata.blog.gov.uk/">Data at GDS</a>
-          blog.
-        </p>
-
-        <ul>
-          <li>
-            <h3><a href="https://github.com/alphagov/spotlight">Spotlight</a></h3>
-            <p>
-              Spotlight is the Node.js frontend which replaces and unifies the other
-              frontend apps (<a href="https://github.com/alphagov/limelight">Limelight</a>,
-              <a href="https://github.com/alphagov/datainsight-frontend">Datainsight Frontend</a> and
-              <a href="https://github.com/alphagov/transactions-explorer">Transactions Explorer</a>)
-              for the Performance Platform.
-            </p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/backdrop">Backdrop</a></h3>
-            <p>
-              Backdrop is the Python API used for storing and exposing data stored in
-              the Performance Platform.
-            </p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/pp-puppet">Puppet</a></h3>
-            <p>We use Puppet to provision machines in all our environments.</p>
-          </li>
-        </ul>
-      </article>
-
-      <article class="collection">
-        <h2>Tools for the office</h2>
-
-        <p>We have a lot of code that shows up on displays around our office.</p>
-
-        <ul>
-          <li>
-            <h3><a href="https://github.com/alphagov/fourth-wall">Fourth Wall</a></h3>
-            <p>
-              Fourth Wall is a monitor that shows open pull requests on GitHub (both public
-              and Enterprise) and build status on Travis.
-            </p>
-          </li>
-          <li>
-            <h3><a href="https://github.com/alphagov/showtime">Showtime</a></h3>
-            <p>
-              Showtime is a Ruby project that can automate a web browser to show a journey
-              through a website.
-            </p>
-          </li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Coming Soon</h2>
-        <p>Overviews of: GOV.UK publishing, tools for operating GOV.UK, and a few other repos.</p>
-      </article>
-
-      <article>
-        <h2>A little background</h2>
-
-        <h3>Who is this code by?</h3>
-
-        <p>This is the GitHub account of the Government Digital Service, a unit of the UK government's Cabinet Office tasked with delivering digital by default. For more on GDS and the UK government's digital strategy <a href="http://digital.cabinetoffice.gov.uk">see the GDS blog</a>.</p>
-
-        <h3>Why alphagov?</h3>
-
-        <p><a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated that the GOV.UK project (and the Government Digital Service with it) could work. It was launched in May 2011 and remained live until the beta of GOV.UK launched at the end of January 2012. This GitHub account was set up for that project and then developed to be the main account for the Government Digital Service.</p>
-      </article>
-    </div>
-  </body>
-</html>
+</body>
