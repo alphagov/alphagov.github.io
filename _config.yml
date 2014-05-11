@@ -13,6 +13,7 @@ groups:
       <a href='https://gds.blog.gov.uk/2012/12/10/testing-the-redirections/'>Testing The Redirections</a>.
     repos:
       - transition
+      - bouncer
       - redirector
   performance_platform:
     name: Performance Platform
