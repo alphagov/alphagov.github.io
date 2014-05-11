@@ -11,6 +11,15 @@ groups:
       - government-service-design-manual
       - design-principles
       - service-domain-checker
+  govuk_look_feel:
+    name: GOV.UK templates and styles
+    bio: |
+      GDS offers templates and styles to help government departments create services that fit the
+      GOV.UK look and feel.
+    repos:
+      - govuk_template
+      - govuk_frontend_toolkit
+      - govuk_elements
   transitioning_to_govuk:
     name: Transitioning to GOV.UK
     bio: |
