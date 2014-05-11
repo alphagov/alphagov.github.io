@@ -4,6 +4,13 @@ exclude:
   - README.md
 
 groups:
+  advice_and_guidance:
+    name: Guidance on digital services
+    bio: We create and maintain guidance on creating great digital government services.
+    repos:
+      - government-service-design-manual
+      - design-principles
+      - service-domain-checker
   transitioning_to_govuk:
     name: Transitioning to GOV.UK
     bio: |
