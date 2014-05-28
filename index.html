@@ -9,15 +9,33 @@
 
 <body>
 
-  <h1>Government Digital Service</h1>
+  <section id="intro">
 
-  <p id="intro">
-    The UK Government Digital Service has a practice of
-    <a href="https://gds.blog.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>.
-    That means a lot of public repositories end up on
-    <a href="https://github.com/alphagov">our GitHub account</a>.
-    Those repositories can be hard to navigate so we're assembling a guide here.
-  </p>
+    <h1>Government Digital Service</h1>
+
+    <p>
+      The <a href="https://gds.blog.gov.uk/">Government Digital Service</a> is a unit of the UK's
+      Cabinet Office tasked with delivering digital by default. We have a practice of
+      <a href="https://gds.blog.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>,
+      which means that a lot of public repositories end up on
+      <a href="https://github.com/alphagov">our GitHub account</a>.
+    </p>
+
+    <p>
+      <a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated
+      that the GOV.UK project (and the Government Digital Service with it) could work.
+      It was launched in May 2011 and remained live until the beta of GOV.UK launched
+      at the end of January 2012. This GitHub account was set up for that project and
+      then became the main account for the Government Digital Service.
+    </p>
+
+    <p>
+      As well as this account, we use the
+      <a href="https://gds-attic.github.io/">GDS attic GitHub account</a> to store
+      repositories that we've used but no longer maintain.
+    </p>
+
+  </section>
 
   {% for group in site.groups %}
     <section class="gds-group">
@@ -48,36 +66,5 @@
 
     </section>
   {% endfor %}
-
-  <aside>
-
-    <h2>
-      Who is this code by?
-    </h2>
-
-    <p>
-      This is the GitHub account of the Government Digital Service, a unit of the UK government's
-      Cabinet Office tasked with delivering digital by default. For more on GDS and the
-      UK government's digital strategy <a href="https://gds.blog.gov.uk/">see the GDS blog</a>.
-    </p>
-
-    <h2>
-      Why ‘alphagov’?
-    </h2>
-
-    <p>
-      <a href="http://alpha.gov.uk/">Alpha.gov.uk</a> was the proof of concept that demonstrated
-      that the GOV.UK project (and the Government Digital Service with it) could work.
-      It was launched in May 2011 and remained live until the beta of GOV.UK launched
-      at the end of January 2012. This GitHub account was set up for that project and
-      then became the main account for the Government Digital Service.
-    </p>
-
-    <p>
-      We use the <a href="https://gds-attic.github.io/">GDS attic GitHub account</a> to store
-      repositories that we've used in the past but no longer maintain.
-    </p>
-
-  </aside>
 
 </body>

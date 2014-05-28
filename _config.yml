@@ -4,6 +4,22 @@ exclude:
   - README.md
 
 groups:
+  advice_and_guidance:
+    name: Guidance on digital services
+    bio: We create and maintain guidance on creating great digital government services.
+    repos:
+      - government-service-design-manual
+      - design-principles
+      - service-domain-checker
+  govuk_look_feel:
+    name: GOV.UK templates and styles
+    bio: |
+      GDS offers templates and styles to help government departments create services that fit the
+      GOV.UK look and feel.
+    repos:
+      - govuk_template
+      - govuk_frontend_toolkit
+      - govuk_elements
   transitioning_to_govuk:
     name: Transitioning to GOV.UK
     bio: |
@@ -13,6 +29,7 @@ groups:
       <a href='https://gds.blog.gov.uk/2012/12/10/testing-the-redirections/'>Testing The Redirections</a>.
     repos:
       - transition
+      - bouncer
       - redirector
   performance_platform:
     name: Performance Platform
