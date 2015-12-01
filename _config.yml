@@ -58,3 +58,6 @@ groups:
     repos:
       - fourth-wall
       - showtime
+
+# Build settings
+markdown: redcarpet
