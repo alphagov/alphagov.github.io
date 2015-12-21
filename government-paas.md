@@ -17,5 +17,5 @@ Service](https://governmentasaplatform.blog.gov.uk/2015/12/17/choosing-cloudfoun
 You can also watch Anna Shipman's Velocity keynote: [A PaaS for
 government](https://www.youtube.com/watch?v=OLOaq-Xf5zU).
 
-We are coding in the open. All our repos are in the [GDS GitHub
-organisation](https://github.com/alphagov/).
+We are [coding in the
+open](https://github.com/alphagov?utf8=%E2%9C%93&query=paas-).
