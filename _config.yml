@@ -2,24 +2,29 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - update-directory-index.sh
 
 groups:
-  advice_and_guidance:
+  guidance_on_digital_services:
     name: Guidance on digital services
     bio: We create and maintain guidance on creating great digital government services.
-    repos:
-      - government-service-design-manual
-      - design-principles
-      - service-domain-checker
-  govuk_look_feel:
+    links:
+      - name: Service Manual
+        url: https://www.gov.uk/service-manual
+        description: Helping government teams create and run great digital services that meet the Digital Service Standard.
+      - name: Government Design Principles
+        url: https://www.gov.uk/design-principles
+        description: The UK government's design principles and examples of how they've been used.
+      - name: Service Toolkit
+        url: https://www.gov.uk/service-toolkit
+        description: All you need to design, build and run services that meet government standards.
+  govuk_templates_and_styles:
     name: GOV.UK templates and styles
     bio: |
-      GDS offers templates and styles to help government departments create services that fit the
+      We offer templates and styles to help government departments create services that fit the
       GOV.UK look and feel.
     repos:
-      - govuk_template
-      - govuk_frontend_toolkit
-      - govuk_elements
+      - govuk-frontend
   transitioning_to_govuk:
     name: Transitioning to GOV.UK
     bio: |
@@ -28,9 +33,9 @@ groups:
       <a href='https://gds.blog.gov.uk/2012/10/11/no-link-left-behind/'>No Link Left Behind</a> and
       <a href='https://gds.blog.gov.uk/2012/12/10/testing-the-redirections/'>Testing The Redirections</a>.
     repos:
-      - transition
       - bouncer
-      - redirector
+      - transition
+      - side-by-side-browser
   performance_platform:
     name: Performance Platform
     bio: |
@@ -39,25 +44,26 @@ groups:
       government over time. We occasionally post on the
       <a href='https://gdsdata.blog.gov.uk/'>Data at GDS</a> blog.
     repos:
-      - spotlight
       - backdrop
-      - pp-puppet
+      - cheapseats
+      - spotlight
+      - stagecraft
   libraries_and_utilities:
     name: Libraries and utilities
     repos:
-      - unicornherder
-      - fake_google_analytics
-      - character_encoding_cleaner
-      - google-auth-bridge
+      - govuk-browser-extension
+      - govuk-saas-config
       - magna-charta
-      - rack-geo
       - sbv-to-ttaf
+      - sidekiq-monitoring
   office_tools:
     name: Tools for the office
-    bio: We have a lot of code that shows up on displays around our office.
+    bio: We have a lot of code that shows up on displays around our office or posts in our Slack channels.
     repos:
       - fourth-wall
+      - gds-hubot
+      - govuk-display-screen
+      - govuk-dependencies
+      - govuk-deploy-lag-badger
+      - seal
       - showtime
-
-# Build settings
-markdown: redcarpet
