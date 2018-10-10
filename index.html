@@ -1,68 +1,63 @@
 ---
 ---
-<!DOCTYPE html>
-<head>
-  <meta charset='utf-8' />
-  <title>Government Digital Service on GitHub</title>
-  <link rel="stylesheet" type="text/css" href="gds.css"></link>
-</head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8' />
+    <title>Government Digital Service on GitHub</title>
+    <link rel="stylesheet" type="text/css" href="gds.css"></link>
+  </head>
+  <body>
 
-<body>
+    <section id="intro">
 
-  <section id="intro">
+      <h1>Government Digital Service</h1>
 
-    <h1>Government Digital Service</h1>
+      <p>
+        The <a href="https://gds.blog.gov.uk/">Government Digital Service</a> is a unit of the UK's
+        Cabinet Office tasked with transforming government services. We have a practice of
+        <a href="https://gds.blog.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>,
+        which means that a lot of public repositories end up on
+        <a href="https://github.com/alphagov">our GitHub organisation</a>.
+      </p>
 
-    <p>
-      The <a href="https://gds.blog.gov.uk/">Government Digital Service</a> is a unit of the UK's
-      Cabinet Office tasked with transforming government services. We have a practice of
-      <a href="https://gds.blog.gov.uk/2012/10/12/coding-in-the-open/">Coding In The Open</a>,
-      which means that a lot of public repositories end up on
-      <a href="https://github.com/alphagov">our GitHub organisation</a>.
-    </p>
-
-    <p>
-      As well as the alphagov organisation, we use
-
-      <a href="https://github.com/gds-operations/">GDS operations</a> to store our <a href="https://gds-operations.github.io/">open source
-infrastructure tooling</a>.
-    </p>
-
-    <p>
-      Repositories that we have previously used but no longer maintain end up in
-the <a href="https://github.com/gds-attic">GDS attic</a>. 
-    </p>
-
-  </section>
-
-  {% for group in site.groups %}
-    <section class="gds-group">
-
-      <h2>{{ group[1].name }}</h2>
-
-      {% if group[1].bio %}
-        <p>{{ group[1].bio }}</p>
-      {% endif %}
-
-      {% for repo in group[1].repos %}
-        {% comment %}
-          Iterate over all alphagov repos each time we try to output a repo.
-          We do this because there's no way to select an element from an array with Liquid.
-        {% endcomment %}
-        {% for alphagov_repo in site.github.public_repositories %}
-          {% if alphagov_repo.name == repo %}
-            <div class="repo">
-              <a href="{{ alphagov_repo.html_url }}">
-                <h3>{{ alphagov_repo.name }}</h3>
-              </a>
-              <p>{{ alphagov_repo.description }}</p>
-              <p>Created in {{ alphagov_repo.created_at | date: '%B %Y' }}, last updated in {{ alphagov_repo.updated_at | date: '%B %Y' }}. Written in {{ alphagov_repo.language }}.</p>
-            </div>
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
+      <p>
+        As well as the alphagov organisation, we use
+        <a href="https://github.com/gds-operations/">GDS operations</a> to store our <a href="https://gds-operations.github.io/">open source
+  infrastructure tooling</a>.
+      </p>
 
     </section>
-  {% endfor %}
 
-</body>
+    {% for group in site.groups %}
+      <section class="gds-group">
+
+        <h2>{{ group[1].name }}</h2>
+
+        {% if group[1].bio %}
+          <p>{{ group[1].bio }}</p>
+        {% endif %}
+
+        {% for repo in group[1].repos %}
+          {% comment %}
+            Iterate over all alphagov repos each time we try to output a repo.
+            We do this because there's no way to select an element from an array with Liquid.
+          {% endcomment %}
+          {% for alphagov_repo in site.github.public_repositories %}
+            {% if alphagov_repo.name == repo %}
+              <div class="repo">
+                <a href="{{ alphagov_repo.html_url }}">
+                  <h3>{{ alphagov_repo.name }}</h3>
+                </a>
+                <p>{{ alphagov_repo.description }}</p>
+                <p>Created in {{ alphagov_repo.created_at | date: '%B %Y' }}, last updated in {{ alphagov_repo.updated_at | date: '%B %Y' }}. Written in {{ alphagov_repo.language }}.</p>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+
+      </section>
+    {% endfor %}
+
+  </body>
+</html>
