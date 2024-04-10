@@ -1,11 +1,14 @@
----
----
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset='utf-8' />
+    <meta charset="utf-8" />
     <title>Government Digital Service on GitHub</title>
-    <link rel="stylesheet" type="text/css" href="gds.css"></link>
+    <style>
+      body { color: #333; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 0 40px; }
+      h1 { color: #000; font-weight: 500; font-size: 2.4em; }
+      a { color: #2b8cc4; }
+      p { font-size: 1.4em; line-height: 1.5em; margin: 0.8em 0; max-width: 66%; }
+    </style>
   </head>
   <body>
 
@@ -23,57 +26,11 @@
 
       <p>
         As well as the alphagov organisation, we use
-        <a href="https://github.com/gds-operations/">GDS operations</a> to store our <a href="https://gds-operations.github.io/">open source
-  infrastructure tooling</a>.
+        <a href="https://github.com/govuk-one-login/">govuk-one-login</a> to store code related
+       to the  <a href="https://www.sign-in.service.gov.uk/">GOV.UK One Login</a> programme.
       </p>
 
     </section>
-
-    {% for group in site.groups %}
-      <section class="gds-group">
-
-        <h2>{{ group[1].name }}</h2>
-
-        {% if group[1].bio %}
-          <p>{{ group[1].bio }}</p>
-        {% endif %}
-
-        {% if group[1].repos %}
-          {% for repo in group[1].repos %}
-            {% comment %}
-              Iterate over all alphagov repos each time we try to output a repo.
-              We do this because there's no way to select an element from an array with Liquid.
-            {% endcomment %}
-            {% for alphagov_repo in site.github.public_repositories %}
-              {% if alphagov_repo.name == repo %}
-                <div class="repo">
-                  <a href="{{ alphagov_repo.html_url }}">
-                    <h3>{{ alphagov_repo.name }}</h3>
-                  </a>
-                  <p>{{ alphagov_repo.description }}</p>
-                  <p>Created in {{ alphagov_repo.created_at | date: '%B %Y' }}, last updated in {{ alphagov_repo.updated_at | date: '%B %Y' }}. Written in {{ alphagov_repo.language }}.</p>
-                </div>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        {% endif %}
-
-        {% if group[1].links %}
-          {% for link in group[1].links %}
-            {% comment %}
-              Display non-repository links with custom messages
-            {% endcomment %}
-            <div class="repo">
-              <a href="{{ link.url }}">
-                <h3>{{ link.name }}</h3>
-              </a>
-              <p>{{ link.description }}</p>
-            </div>
-          {% endfor %}
-        {% endif %}
-
-      </section>
-    {% endfor %}
 
   </body>
 </html>
