@@ -1,3 +1,5 @@
+# ARCHIVED BY DEVEX TEAM
+
 # GitHub organisation site for GDS
 
 This is the GitHub organisation site for GDS.
